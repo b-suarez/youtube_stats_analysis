@@ -1,0 +1,21 @@
+\BOOKMARK [1][-]{section.1}{itemdescripcion}{}% 1
+\BOOKMARK [1][-]{section.2}{itemimportancia}{}% 2
+\BOOKMARK [1][-]{section.3}{itemlimpieza}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Descarga de datos}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Carga de datos}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Selecci\363n datos}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Eliminamos categor\355a sin informaci\363n \(category = 29\)}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.5}{Correcci\363n trending date}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.6}{Correcci\363n publish time}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.7}{Correcci\363n textos}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{itemmetricas}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{Generaci\363n m\351trica video sentiment}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.2}{Generaci\363n m\351trica relevancia}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.3}{Generaci\363n m\351trica sentiment engagement}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.4}{Comprobaci\363n de normalidad}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{itempruebas}{}% 16
+\BOOKMARK [2][-]{subsection.5.1}{Cu\341les son las 50 palabras m\341s populares por pa\355s y atributo}{section.5}% 17
+\BOOKMARK [2][-]{subsection.5.2}{Cu\341nto tarda un video en llegar a Trending}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.3}{Qu\351 categor\355as tienen m\341s \351xito en cada pa\355s}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.4}{Modelo de Regresi\363n}{section.5}% 20
+\BOOKMARK [1][-]{section.6}{itemconclusiones}{}% 21
