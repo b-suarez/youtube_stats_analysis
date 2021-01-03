@@ -98,39 +98,128 @@ Tal y como se menciona en la secci\'on anterior este conjunto de datos extra\'id
 \item Al menos dos datsets deben provenir de una regiones diferentes con la misma lengua. Esto permite hacer comparaciones en el uso del lenguaje.
 
 
+
 \end{itemize} 
 
 Atendiendo a estos criterios hemos seleccionado 4 datsets sobre  los que aplicaremos los mismo algoritmos. Todos los datos ser\'an tratados de la misma forma. En caso de que alg\'un dataset requiera un tratamiento especial en alg\'un punto se especificar\'a el motivo.
 
-\section[item_limpieza]{Limpieza de datos}
-
-
-Por otra parte, la extensi\'on del codigo es demasiado grande para \'este informe, por lo tanto mostraremos s\'olo las partes claves y omitiremos las celdas de an\'alisis y descubrimiento de datos. El c\'odigo completo se puede encontrar en el siguiente \href{https://github.com/b-suarez/youtube_stats_analysis}{LINK}.
+Los 4 datasets contienen datos para Alemania, Reino Unido, Mexico y EEUU.
 
 \subsection{Descarga de datos}
-Debido a que en nuestro caso, los datos vienen en m\'ultiples datasets, vamos a realizar una conexi\'on con Kaggle a trav\'es de su API utilizando nuestro fichero kaggle.json d\'onde guardaremos nuestras claves personales. Adem\'as como los ficheros de texto contienen caracteres en diferentes alfabetos, queremos evitar cualquier error de formato derivado de una incorrecta conversi\'on local.
+
+Puesto que los datos ya contienen error de codificaci\'on de los atributos de texto y queremos evitar cualquier posible corrupci\'on de los datos al pasar por una m\'aquina intermedia (nuestros ordenadores), vamos a realizar una conexi\'on con Kaggle a trav\'es de su API utilizando nuestro fichero kaggle.json d\'onde guardaremos nuestras claves personales y descargamos los datos directamente a nuestro {\itshape drive} de google desde donde cargaremos los datos a nuestro notebook de {\itshape Google Colab}. 
 
 \begin{figure}[h!]
  \centering
 \includegraphics[width=13cm]{kaggle_upload.png}
+\caption{Carga de datos desde {\itshape Kaggle}}
+\label{fig:carga}
 \end{figure}
 
 
-\subsection{Carga de datos}
 Una vez nos hemos descargado los datasets y los tenemos en nuestro cloud, vamos a descomprimir el fichero y cargar los distintos datasets en un array de datasets que contendr\'a los diferentes datasets de cada mercado.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=13cm]{data_load.png}
+\includegraphics[width=7cm]{data_load.png}
+\caption{Descomprimiendo datos desde {\itshape Google Drive}}
+\label{fig:desc}
+\end{figure}
+
+\section[item_limpieza]{Limpieza de datos}
+
+\subsection{?`Los datos contienen ceros o elementos vac\'ios? ?`C\'omo gestionar\'ias cada uno de estos casos?}
+
+Para nuestros casos no hay valores nulos, como se puede ver en la siguiente figura\ref{fig:nula} izquierda:
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6cm]{vacio_datos.JPG}
+\includegraphics[width=6cm]{Na_values.JPG}
+\caption{A la izquierda valores nulos. A la derecha valores {\itshape NA}}
+\label{fig:nula}
+\end{figure}
+
+Los posibles elementos vac\'ios en los atributos de texto se tratan de forma separada durante la limpieza de texto.
+
+Cuando buscamos para valores {\itshape NA} (figura \ref{fig:nula} derecha), vemos que los valores vac\'ios se encuentran en la columna {\itshape description} (atributo texto), de la que no extraemos informaci\'on en nuestro an\'alisis. A\'un as\'i, no ha habido motivo de tratar estos valores directamente ya que durante otros procesos de limpieza, las obsevaciones  que contienen {\itshape NAs} han sido eliminadas por otros motivos. Tambi\'en cabe mencionar que antes de empezar nuestro an\'alisis en {\itshape R} hemos eliminado expl\'icitamente todas las observaciones que conten\'ian valores {\itshape NA}.
+
+
+\subsection{Errores en en los c\'odigos de tiempo}
+
+Una de las primeras errores que hemos podido detectar es que los datos referentes a c\'odigos de tiempo se encontraban en formatos diferentes. Por lo que se ha unificado los formatos de tiempo y convertirlos datos de {\itshape object} a {\itshape datetime}.
+
+\subsubsection{Correcci\'on  trending date}
+
+Transformaci\'on de todas las columnas que contengan un valor de fecha a tipo datetime, empezando por la columna trending date.
+
+\begin{figure}[h!]
+ \centering
+\includegraphics[width=13cm]{correc_trending.png}
+\caption{Conversi\'on para {\itshape trending date}}
+\label{fig:trend_date}
+\end{figure}
+
+\subsubsection{Correcci\'on  publish time}
+Vamos a realizar la misma operaci\'on con la columna publish time.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{correc_publish.png}
+\caption{Conversi\'on para {\itshape publish time}}
+\label{fig:pub_date}
 \end{figure}
 
 
+\subsection{Correcci\'on  textos}
+La parte de {\itshape language cleaning} es muy importante para nuestro proyecto, ya que tener textos limpios y analizables nos ser\'a \'util para futuros   an\'alisis.
+
+
+\subsubsection{Limpieza general}
+
+En nuestro caso hemos definido diferentes funciones para corregir caracteres mal codificados, emoticonos, signos de puntuaci\'on que no necesitamos para el an\'alisis del lenguaje natura, as\'i como una funci\'on espec\'ifica para tratar carateres especiales del alfabeto alem\'an l. Hemos aplicado a las columnas: title, channel{\textunderscore}title,  tags y description. Las funciones se presentan el figura \ref{fig:corrtext}.
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{latin_characters.png}\\
+\includegraphics[width=10cm]{german_characters.png}\\
+\includegraphics[width=10cm]{misspellings.png}
+\caption{Correci\'on de texto}
+\label{fig:corrtext}
+\end{figure}
+
+A de m\'as de las correcciones presentadas han sido necesarias, varias rondas de correci\'on de texto donde se han eliminado errores que no se hab\'ian capturado inicialmente. Todo esto se puede ver dentro del c\'odigo en la secci\'on {\itshape Some NLP-More Cleaning}
+
+\subsubsection{{\itshape Stop Words} para el {\itshape document-Term Matrix}}
+
+Con el fin de realizar las {\itshape World Clouds}, hay que eliminar del {\itshape document-Term Matrix} todas las {\itshape Stop Words}. El m\'odulo {\itshape Count Vectorizer} de {\itshape sklearn} ya proporciona una lista de {\itshape Stop Words} para ingl\'es pero debe ampliarse para otros lenguajes. De proyectos anteriores, ya dispon\'iamos de listas de {\itshape Stop words} para otros idiomas, que hemos a\~nadido, como se puede ver en la figura \ref{fig:stop}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{Stop_words.JPG}\\
+\caption{A\~nadiendo {\itshape Stop Words}}
+\label{fig:stop}
+\end{figure}
+
+A de m\'as de estas {\itshape Stop Words} ha sido necesario a\~nadir manualmente m\'as palabras debido a los errores de codificaci\'on de los textos
+
+\subsection{Identificaci\'on y tratamiento de valores extremos}
+
+Para nuestro caso los valores extremos en visitas o cuentas de comentarios marcan los v\'ideos m\'as populares, por lo que no parece acertado tratar estos datos como si de errores se tratasen, ya que estos valores extremos nos pueden indicar casos interesantes de estudio. por otra parte, al estudiar cuanto tiempo tarda un v\'ideo en convertirse  en tendencia, hemos visto que hay v\'ideos que pueden tardar hasta once a\~nos en llegar a tendencia. Estos caso, si son outliers  para nosotros. Nuestro caso de estudio es, como las cosas que ocurrieron ayer afecta a los que ser\'a tendencia ma\~nana y cuanto dura el impacto de estos hechos en el tiempo. Despu\'es de analizar las deltas de tiempo hemos considerado razonable eliminar cualquier video que tarde m\'as de 40 d\'ias en convertirse en tendencia por dos razones; Si algo tarda m\'as de 40 d\'ias en convertirse en tendencia no proviene de v\'ideos de historias recientes. Los v\'ideos que tardan m\'as de 40 d\'as en convertirse en tendencia suponen menos del $1.5\%$ de la informaci\'on total. En la figura \ref{fig:delta} se presenta la m\'etodo de eliminaci\'on de estos datos.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{tiempo.JPG}\\
+\caption{Eliminamos las observaciones con una delta de tiempo superior a 40 d\'ias y se comprueba la cantidad de informaci\'on perdida}
+\label{fig:delta}
+\end{figure}
+
+\section{An\'alisis de los datos}
 
 \subsection{Selecci\'on datos}
 Primero de todo vamos a eliminar las filas con valores True en los atributos l\'ogicos ya que son minor\'ia y no son estad\'isticas que nos interesen para nuestro analisis.
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{data_selection_1.png}
-\end{figure}
+
 
 
 
@@ -154,46 +243,9 @@ A\'un eliminandola, preservamos el 95 porciento de la informaci\'on.
 \includegraphics[width=13cm]{remove_category.png}
 \end{figure}
 
-\subsection{Correcci\'on  trending date}
-
-Los formatos en los que las fechas nos vienen dadas, no son consistentes entre ellos. Por lo tanto, vamos a transformar todas las columnas que contengan un valor de fecha a tipo datetime, empezando por la columna trending date.
-
-\begin{figure}[h!]
- \centering
-\includegraphics[width=13cm]{correc_trending.png}
-\end{figure}
-
-\subsection{Correcci\'on  publish time}
-Vamos a realizar la misma operaci\'on con la columna publish time.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{correc_publish.png}
-\end{figure}
-
-\subsection{Correcci\'on  textos}
-La parte de language cleaning ees una de las m\'as importantes para nuestro proyecto ya que tener textos limpios y analizables sirve como una muy buena fundaci\'on para proyectos de an\'alisis futuros.
 
 
-En nuestro caso hemos definido diferentes funciones para corregir caracteres mal codificados que hemos aplicado a las columnas: title, channel{\textunderscore}title,  tags y description.
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{latin_characters.png}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{german_characters.png}
-\end{figure}
-
-
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{misspellings.png}
-\end{figure}
-
-\'Estas funciones se aplican a cada uno de los datasets para poder limpiar las columnas correctamente.
 
 \section[item_metricas]{Generaci\'on de m\'etricas y an\'alisis de datos}
 
