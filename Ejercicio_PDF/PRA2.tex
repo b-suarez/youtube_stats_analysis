@@ -26,7 +26,7 @@ Pr\'actica 2: Limpieza y an\'alisis de los datos
 
 \textbf{Notas previas al ejercicio:} \\
 
-Hemos contestado a las preguntas de acuerdo a lo indicado al ejercicio, sin embargo debido a la extensi\'on del trabajo y del c\'odigo, \'unicamente algunas partes del c\'odigo y su desarrollo  se han incluido en este texto. El objetivo es facilitar la comprensi\'on del desarrollo de las diversas partes del trabajo. El c\'odigo en su totalidad se puede encontrar en el enlace que se facilita a GitHub.
+Hemos contestado a las preguntas de acuerdo a lo indicado al ejercicio, sin embargo debido a la extensi\'on del trabajo y del c\'odigo, \'unicamente algunas partes del c\'odigo y su desarrollo  se han incluido en este texto. El objetivo es facilitar la comprensi\'on del desarrollo de las diversas partes del trabajo. El c\'odigo en su totalidad se puede encontrar en el enlace que se facilita a  \href{https://github.com/b-suarez/youtube_stats_analysis}{GitHub}.
 
 El c\'odigo se ha hecho sobre {\itshape Google Colab} para facilitar la reproducci\'on y ejecuci\'on del trabajo. La primera parte del c\'odigo est\'a implementado en {\itshape Python} y la segunda parte en {\itshape R}. Las dos partes se han implementado sobre el mismo notebook.
 
@@ -87,10 +87,23 @@ A partir del conjunto de datos para  {\itshape Youtube}  se plantean diferentes 
 
 Estos an\'alisis son de gran relevancia actualmente ya que como todos sabemos, la industria de creaci\'on de contenido online genera una gran cantidad de dinero y p\'ublico. Saber navegar \'este mercado puede ser muy interesante para cualquier marca o individuo que quiera generar beneficios o atraer p\'ublico a trav\'es de YouTube.
 
+\section{Integraci\'on y selecci\'on de los datos de inter\'es a analizar}
+
+Tal y como se menciona en la secci\'on anterior este conjunto de datos extra\'idos de {\itshape Kaggle} cuenta con 10 datasets correspondientes a datos para la plataforma {\itshape YouTube} para diez pa\'ises diferentes. Los datasets de los diferentes pa\'ises cuentan con los mismos atributos. En general, los datsets tambi\'en presentan un fallo en la codificaci\'on de los caracteres que hace que las columnas con texto cuyos caracteres no est\'an dentro del alfabeto ingl\'es, no se cargen correctamente. Debido a esto se han seleccionado 4 datasets a tendiendo a una serie de criterios:
+
+\begin{itemize}
+
+\item Podemos leer entender el idioma del pa\'is donde provienen los datos. De este modo, podemos corregir problemas de codificaci\'on de caracteres en un tiempo razonable.
+\item Representan zonas geogr\'aficas de varios continentes, en caso de que queramos hacer comparaciones regionales. 
+\item Al menos dos datsets deben provenir de una regiones diferentes con la misma lengua. Esto permite hacer comparaciones en el uso del lenguaje.
+
+
+\end{itemize} 
+
+Atendiendo a estos criterios hemos seleccionado 4 datsets sobre  los que aplicaremos los mismo algoritmos. Todos los datos ser\'an tratados de la misma forma. En caso de que alg\'un dataset requiera un tratamiento especial en alg\'un punto se especificar\'a el motivo.
 
 \section[item_limpieza]{Limpieza de datos}
 
-Antes de empezar con la descripci\'on del proceso nos gustar\'ia mencionar que el proceso de an\'alisis se ha realizado sobre {\itshape Google Colab}, la limpieza de datos, transformaci\'on de datos y NLP se han hecho en {\itshape Python} y los modelos de regresi\'on se han hecho en el mismo notebook pero en {\itshape R}. 
 
 Por otra parte, la extensi\'on del codigo es demasiado grande para \'este informe, por lo tanto mostraremos s\'olo las partes claves y omitiremos las celdas de an\'alisis y descubrimiento de datos. El c\'odigo completo se puede encontrar en el siguiente \href{https://github.com/b-suarez/youtube_stats_analysis}{LINK}.
 
