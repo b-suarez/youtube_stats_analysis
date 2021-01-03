@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.2)  3 JAN 2021 18:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.2)  3 JAN 2021 21:57
 entering extended mode
 **./PRA2.tex
 (PRA2.tex
@@ -331,7 +331,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `subscript' on input line 69.
 
 [3]
-<kaggle_upload.png, id=137, 727.71875pt x 425.59pt>
+<kaggle_upload.png, id=133, 727.71875pt x 425.59pt>
 File: kaggle_upload.png Graphic file (type png)
 <use kaggle_upload.png>
 Package pdftex.def Info: kaggle_upload.png  used on input line 114.
@@ -340,7 +340,7 @@ Package pdftex.def Info: kaggle_upload.png  used on input line 114.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<data_load.png, id=139, 616.3025pt x 695.59875pt>
+<data_load.png, id=135, 616.3025pt x 695.59875pt>
 File: data_load.png Graphic file (type png)
 <use data_load.png>
 Package pdftex.def Info: data_load.png  used on input line 123.
@@ -359,12 +359,12 @@ Overfull \hbox (0.38254pt too wide) in paragraph at lines 130--130
 -
  []
 
-<vacio_datos.JPG, id=145, 370.38374pt x 354.57469pt>
+<vacio_datos.JPG, id=141, 370.38374pt x 354.57469pt>
 File: vacio_datos.JPG Graphic file (type jpg)
 <use vacio_datos.JPG>
 Package pdftex.def Info: vacio_datos.JPG  used on input line 136.
 (pdftex.def)             Requested size: 170.71652pt x 163.43095pt.
-<Na_values.JPG, id=146, 237.88875pt x 305.64188pt>
+<Na_values.JPG, id=142, 237.88875pt x 305.64188pt>
 File: Na_values.JPG Graphic file (type jpg)
 <use Na_values.JPG>
 Package pdftex.def Info: Na_values.JPG  used on input line 137.
@@ -374,34 +374,34 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <./kaggle_upload.png>] [6 <./data_load.png> <./vacio_datos.JPG> <./Na_values
 .JPG>]
-<correc_trending.png, id=162, 619.31375pt x 167.62625pt>
+<correc_trending.png, id=158, 619.31375pt x 167.62625pt>
 File: correc_trending.png Graphic file (type png)
 <use correc_trending.png>
 Package pdftex.def Info: correc_trending.png  used on input line 157.
 (pdftex.def)             Requested size: 369.88582pt x 100.11867pt.
-<correc_publish.png, id=163, 775.89874pt x 223.83624pt>
+<correc_publish.png, id=159, 775.89874pt x 223.83624pt>
 File: correc_publish.png Graphic file (type png)
 <use correc_publish.png>
 Package pdftex.def Info: correc_publish.png  used on input line 167.
 (pdftex.def)             Requested size: 369.88582pt x 106.70926pt.
  [7 <./correc_trending.png> <./correc_publish.png>]
-<latin_characters.png, id=173, 843.15pt x 380.42125pt>
+<latin_characters.png, id=169, 843.15pt x 380.42125pt>
 File: latin_characters.png Graphic file (type png)
 <use latin_characters.png>
 Package pdftex.def Info: latin_characters.png  used on input line 185.
 (pdftex.def)             Requested size: 284.52756pt x 128.37791pt.
-<german_characters.png, id=174, 877.2775pt x 434.62375pt>
+<german_characters.png, id=170, 877.2775pt x 434.62375pt>
 File: german_characters.png Graphic file (type png)
 <use german_characters.png>
 Package pdftex.def Info: german_characters.png  used on input line 186.
 (pdftex.def)             Requested size: 284.52756pt x 140.95924pt.
-<misspellings.png, id=175, 848.16875pt x 269.005pt>
+<misspellings.png, id=171, 848.16875pt x 269.005pt>
 File: misspellings.png Graphic file (type png)
 <use misspellings.png>
 Package pdftex.def Info: misspellings.png  used on input line 187.
 (pdftex.def)             Requested size: 284.52756pt x 90.2414pt.
  [8 <./latin_characters.png> <./german_characters.png> <./misspellings.png>]
-<Stop_words.JPG, id=185, 615.0478pt x 496.10344pt>
+<Stop_words.JPG, id=181, 615.0478pt x 496.10344pt>
 File: Stop_words.JPG Graphic file (type jpg)
 <use Stop_words.JPG>
 Package pdftex.def Info: Stop_words.JPG  used on input line 200.
@@ -413,175 +413,133 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 209.
  [9 <./Stop_words.JPG>]
-<tiempo.JPG, id=193, 588.69937pt x 325.215pt>
+<tiempo.JPG, id=189, 588.69937pt x 325.215pt>
 File: tiempo.JPG Graphic file (type jpg)
 <use tiempo.JPG>
 Package pdftex.def Info: tiempo.JPG  used on input line 213.
 (pdftex.def)             Requested size: 284.52756pt x 157.18321pt.
-<data_selection_2.png, id=194, 728.7225pt x 182.6825pt>
-File: data_selection_2.png Graphic file (type png)
-<use data_selection_2.png>
-Package pdftex.def Info: data_selection_2.png  used on input line 231.
-(pdftex.def)             Requested size: 369.88582pt x 92.7264pt.
+<data_selection_2.JPG, id=191, 490.83376pt x 265.74281pt>
+File: data_selection_2.JPG Graphic file (type jpg)
+<use data_selection_2.JPG>
+Package pdftex.def Info: data_selection_2.JPG  used on input line 229.
+(pdftex.def)             Requested size: 369.88582pt x 200.26762pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10 <./tiempo.JPG>]
-<remove_category.png, id=202, 649.42625pt x 273.02pt>
+<remove_category.png, id=201, 649.42625pt x 273.02pt>
 File: remove_category.png Graphic file (type png)
 <use remove_category.png>
-Package pdftex.def Info: remove_category.png  used on input line 243.
+Package pdftex.def Info: remove_category.png  used on input line 247.
 (pdftex.def)             Requested size: 369.88582pt x 155.5022pt.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 250.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[11 <./data_selection_2.png> <./remove_category.png>]
-<rvs_gen.png, id=209, 744.7825pt x 72.27pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 256.
+
+[11 <./data_selection_2.JPG>]
+<rvs_gen.png, id=208, 744.7825pt x 72.27pt>
 File: rvs_gen.png Graphic file (type png)
 <use rvs_gen.png>
-Package pdftex.def Info: rvs_gen.png  used on input line 261.
+Package pdftex.def Info: rvs_gen.png  used on input line 267.
 (pdftex.def)             Requested size: 369.88582pt x 35.89229pt.
 <rvs_plot.png, id=210, 923.45pt x 607.26875pt>
 File: rvs_plot.png Graphic file (type png)
 <use rvs_plot.png>
-Package pdftex.def Info: rvs_plot.png  used on input line 267.
+Package pdftex.def Info: rvs_plot.png  used on input line 276.
 (pdftex.def)             Requested size: 398.33858pt x 261.94516pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 267--268
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 276--277
  [][] 
  []
 
-<rel_gen.png, id=211, 760.8425pt x 87.32625pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<rel_gen.png, id=212, 760.8425pt x 87.32625pt>
 File: rel_gen.png Graphic file (type png)
 <use rel_gen.png>
-Package pdftex.def Info: rel_gen.png  used on input line 276.
+Package pdftex.def Info: rel_gen.png  used on input line 287.
 (pdftex.def)             Requested size: 369.88582pt x 42.45444pt.
-[12 <./rvs_gen.png> <./rvs_plot.png>]
-<rel_relevance_plot.png, id=219, 935.495pt x 611.28375pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./remove_category.png> <./rvs_gen.png>]
+<rel_relevance_plot.png, id=224, 935.495pt x 611.28375pt>
 File: rel_relevance_plot.png Graphic file (type png)
 <use rel_relevance_plot.png>
-Package pdftex.def Info: rel_relevance_plot.png  used on input line 285.
+Package pdftex.def Info: rel_relevance_plot.png  used on input line 299.
 (pdftex.def)             Requested size: 398.33858pt x 260.29117pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 285--286
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 299--300
  [][] 
  []
 
-<pos_eng_gen.png, id=220, 804.00375pt x 88.33pt>
-File: pos_eng_gen.png Graphic file (type png)
-<use pos_eng_gen.png>
-Package pdftex.def Info: pos_eng_gen.png  used on input line 295.
-(pdftex.def)             Requested size: 369.88582pt x 40.63632pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<neg_eng_gen.png, id=221, 803.0pt x 91.34125pt>
-File: neg_eng_gen.png Graphic file (type png)
-<use neg_eng_gen.png>
-Package pdftex.def Info: neg_eng_gen.png  used on input line 302.
-(pdftex.def)             Requested size: 369.88582pt x 42.07602pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (17.31433pt too wide) in paragraph at lines 305--306
-[]\T1/cmr/m/n/12 El ove-rall en-ga-ge-ment se cal-cu-la-rá uti-li-zan-do la fór
--mu-la: \T1/cmr/m/it/12 (likes-dislikes)/views 
+[13 <./rvs_plot.png> <./rel_gen.png>]
+Overfull \hbox (18.03632pt too wide) in paragraph at lines 319--320
+[]\T1/cmr/m/it/12 Overall en-ga-ge-ment \T1/cmr/m/n/12 se cal-cu-la-rá uti-li-z
+an-do la fór-mu-la: \T1/cmr/m/it/12 (likes-dislikes)/views 
  []
 
-<ove_eng_gen.png, id=222, 811.03pt x 89.33376pt>
-File: ove_eng_gen.png Graphic file (type png)
-<use ove_eng_gen.png>
-Package pdftex.def Info: ove_eng_gen.png  used on input line 309.
-(pdftex.def)             Requested size: 369.88582pt x 40.7437pt.
-[13 <./rel_gen.png> <./rel_relevance_plot.png>]
-<engagement_1.png, id=229, 907.39pt x 861.2175pt>
+<engagement_1.png, id=234, 907.39pt x 861.2175pt>
 File: engagement_1.png Graphic file (type png)
 <use engagement_1.png>
-Package pdftex.def Info: engagement_1.png  used on input line 316.
+Package pdftex.def Info: engagement_1.png  used on input line 328.
 (pdftex.def)             Requested size: 369.88582pt x 351.06459pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<engagement_2.png, id=230, 904.37875pt x 289.08pt>
+<engagement_2.png, id=235, 904.37875pt x 289.08pt>
 File: engagement_2.png Graphic file (type png)
 <use engagement_2.png>
-Package pdftex.def Info: engagement_2.png  used on input line 321.
+Package pdftex.def Info: engagement_2.png  used on input line 329.
 (pdftex.def)             Requested size: 369.88582pt x 118.22803pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-30.
-(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-[14 <./pos_eng_gen.png> <./neg_eng_gen.png> <./ove_eng_gen.png>]
-Overfull \hbox (245.86972pt too wide) in paragraph at lines 353--353
-[]\T1/cmtt/m/n/12 names=['views','likes','dislikes','comment_count','rvs','rel_
-relevance','overall_sentiment_engagement'][] 
- []
-
-
-Overfull \hbox (215.00226pt too wide) in paragraph at lines 353--353
-[]\T1/cmtt/m/n/12 names_fitted=['fviews','flikes','fdislikes','fcomment_count',
-'frvs','frel_rel','foverall_sen_eng'][] 
- []
-
-
-Overfull \hbox (48.31796pt too wide) in paragraph at lines 353--353
-[]\T1/cmtt/m/n/12 country=['Germany','Great Britain','Mexico','United States of
- America'][] 
- []
-
-[15 <./engagement_1.png> <./engagement_2.png>]
-<dataframe_1.JPG, id=246, 631.60968pt x 194.22563pt>
+[14 <./rel_relevance_plot.png>] [15 <./engagement_1.png> <./engagement_2.png>]
+<dataframe_1.JPG, id=251, 631.60968pt x 194.22563pt>
 File: dataframe_1.JPG Graphic file (type jpg)
 <use dataframe_1.JPG>
-Package pdftex.def Info: dataframe_1.JPG  used on input line 359.
+Package pdftex.def Info: dataframe_1.JPG  used on input line 347.
 (pdftex.def)             Requested size: 341.43306pt x 104.99585pt.
-<dataframe_2.JPG, id=247, 483.30562pt x 176.15813pt>
+<dataframe_2.JPG, id=252, 483.30562pt x 176.15813pt>
 File: dataframe_2.JPG Graphic file (type jpg)
 <use dataframe_2.JPG>
-Package pdftex.def Info: dataframe_2.JPG  used on input line 360.
+Package pdftex.def Info: dataframe_2.JPG  used on input line 348.
 (pdftex.def)             Requested size: 341.43306pt x 124.45221pt.
-<dataframe_3.JPG, id=248, 413.29407pt x 140.77594pt>
+
+[16 <./dataframe_1.JPG> <./dataframe_2.JPG>]
+<dataframe_3.JPG, id=261, 413.29407pt x 140.77594pt>
 File: dataframe_3.JPG Graphic file (type jpg)
 <use dataframe_3.JPG>
-Package pdftex.def Info: dataframe_3.JPG  used on input line 369.
+Package pdftex.def Info: dataframe_3.JPG  used on input line 359.
 (pdftex.def)             Requested size: 341.43306pt x 116.30052pt.
+<grafica_transformada.JPG, id=262, 254.45062pt x 412.54124pt>
+File: grafica_transformada.JPG Graphic file (type jpg)
+<use grafica_transformada.JPG>
+Package pdftex.def Info: grafica_transformada.JPG  used on input line 368.
+(pdftex.def)             Requested size: 142.26378pt x 230.6627pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (33.11064pt too wide) in paragraph at lines 372--373
-\T1/cmr/m/n/12 he-mos he-cho una re-pre-sen-ta-ción de den-si-da-des pa-ra la l
-os da-tos \T1/cmr/m/it/12 q_overall_sen_eng\T1/cmr/m/n/12 ,
- []
-
-[16 <./dataframe_1.JPG> <./dataframe_2.JPG>]
-<grafica_transformada.JPG, id=253, 254.45062pt x 412.54124pt>
-File: grafica_transformada.JPG Graphic file (type jpg)
-<use grafica_transformada.JPG>
-Package pdftex.def Info: grafica_transformada.JPG  used on input line 376.
-(pdftex.def)             Requested size: 142.26378pt x 230.6627pt.
-
-Overfull \hbox (3.5011pt too wide) in paragraph at lines 381--382
-\T1/cmr/m/it/12 Yeo-Jhonson \T1/cmr/m/n/12 que si-guen una dis-tri-bu-ción nor-
-mal y la mé-tri-ca \T1/cmr/m/it/12 ove-rall_sent_eng
+Overfull \hbox (3.18161pt too wide) in paragraph at lines 375--376
+[]\T1/cmr/m/n/12 En con-clu-sión aho-ra con-ta-mos con los da-tos trans-for-ma-
+dos vía \T1/cmr/m/it/12 Yeo-Jhonson
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 383.
+(hyperref)                removing `subscript' on input line 379.
 
-[17 <./dataframe_3.JPG> <./grafica_transformada.JPG>]
-<50_words_1.png, id=258, 819.06pt x 550.055pt>
+[17 <./dataframe_3.JPG>]
+<50_words_1.png, id=270, 819.06pt x 550.055pt>
 File: 50_words_1.png Graphic file (type png)
 <use 50_words_1.png>
 Package pdftex.def Info: 50_words_1.png  used on input line 393.
@@ -596,40 +554,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 390--395
 
  []
 
-<50_words_title.png, id=259, 739.76375pt x 167.62625pt>
+[18 <./grafica_transformada.JPG>]
+<50_words_title.png, id=277, 739.76375pt x 167.62625pt>
 File: 50_words_title.png Graphic file (type png)
 <use 50_words_title.png>
 Package pdftex.def Info: 50_words_title.png  used on input line 400.
 (pdftex.def)             Requested size: 341.43306pt x 77.36732pt.
-<50_words_channel.png, id=260, 769.87625pt x 160.6pt>
+<50_words_channel.png, id=278, 769.87625pt x 160.6pt>
 File: 50_words_channel.png Graphic file (type png)
 <use 50_words_channel.png>
 Package pdftex.def Info: 50_words_channel.png  used on input line 401.
 (pdftex.def)             Requested size: 341.43306pt x 71.22539pt.
-<50_words_tags.png, id=261, 692.5875pt x 157.58875pt>
+<50_words_tags.png, id=279, 692.5875pt x 157.58875pt>
 File: 50_words_tags.png Graphic file (type png)
 <use 50_words_tags.png>
 Package pdftex.def Info: 50_words_tags.png  used on input line 402.
 (pdftex.def)             Requested size: 341.43306pt x 77.69044pt.
-<50_words_desc.png, id=262, 753.81625pt x 169.63374pt>
+<50_words_desc.png, id=280, 753.81625pt x 169.63374pt>
 File: 50_words_desc.png Graphic file (type png)
 <use 50_words_desc.png>
 Package pdftex.def Info: 50_words_desc.png  used on input line 403.
 (pdftex.def)             Requested size: 341.43306pt x 76.83144pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<wordcloud_tags.png, id=263, 923.45pt x 516.93124pt>
+<wordcloud_tags.png, id=281, 923.45pt x 516.93124pt>
 File: wordcloud_tags.png Graphic file (type png)
 <use wordcloud_tags.png>
 Package pdftex.def Info: wordcloud_tags.png  used on input line 416.
 (pdftex.def)             Requested size: 369.88582pt x 207.05278pt.
-<wordcloud_title.png, id=264, 934.49126pt x 527.9725pt>
+<wordcloud_title.png, id=282, 934.49126pt x 527.9725pt>
 File: wordcloud_title.png Graphic file (type png)
 <use wordcloud_title.png>
 Package pdftex.def Info: wordcloud_title.png  used on input line 425.
 (pdftex.def)             Requested size: 369.88582pt x 208.97786pt.
-<wordcould_desc.png, id=265, 915.42pt x 512.91624pt>
+<wordcould_desc.png, id=283, 915.42pt x 512.91624pt>
 File: wordcould_desc.png Graphic file (type png)
 <use wordcould_desc.png>
 Package pdftex.def Info: wordcould_desc.png  used on input line 432.
@@ -669,25 +629,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 410--433
 
  []
 
-[18 <./50_words_1.png>] [19 <./50_words_title.png> <./50_words_channel.png> <./
-50_words_tags.png> <./50_words_desc.png> <./wordcloud_tags.png>] [20 <./wordclo
-ud_title.png>]
-<time_delta_gen.png, id=287, 692.5875pt x 122.4575pt>
+[19 <./50_words_1.png>] [20 <./50_words_title.png> <./50_words_channel.png> <./
+50_words_tags.png> <./50_words_desc.png> <./wordcloud_tags.png>]
+<time_delta_gen.png, id=298, 692.5875pt x 122.4575pt>
 File: time_delta_gen.png Graphic file (type png)
 <use time_delta_gen.png>
 Package pdftex.def Info: time_delta_gen.png  used on input line 438.
 (pdftex.def)             Requested size: 369.88582pt x 65.40105pt.
-<plot_freq_times.png, id=288, 923.45pt x 601.24625pt>
+<plot_freq_times.png, id=299, 923.45pt x 601.24625pt>
 File: plot_freq_times.png Graphic file (type png)
 <use plot_freq_times.png>
 Package pdftex.def Info: plot_freq_times.png  used on input line 444.
 (pdftex.def)             Requested size: 369.88582pt x 240.82451pt.
-<plot_freq_code.png, id=289, 776.9025pt x 909.3975pt>
+<plot_freq_code.png, id=300, 776.9025pt x 909.3975pt>
 File: plot_freq_code.png Graphic file (type png)
 <use plot_freq_code.png>
 Package pdftex.def Info: plot_freq_code.png  used on input line 450.
 (pdftex.def)             Requested size: 369.88582pt x 432.98128pt.
-<plot_freq_perc.png, id=290, 912.40875pt x 607.26875pt>
+<plot_freq_perc.png, id=301, 912.40875pt x 607.26875pt>
 File: plot_freq_perc.png Graphic file (type png)
 <use plot_freq_perc.png>
 Package pdftex.def Info: plot_freq_perc.png  used on input line 453.
@@ -727,19 +686,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--457
 
  []
 
-[21 <./wordcould_desc.png> <./time_delta_gen.png>] [22 <./plot_freq_times.png>]
-[23 <./plot_freq_code.png>]
-<categories_1.png, id=308, 738.76pt x 355.3275pt>
+[21 <./wordcloud_title.png> <./wordcould_desc.png>] [22 <./time_delta_gen.png> 
+<./plot_freq_times.png>] [23 <./plot_freq_code.png>]
+<categories_1.png, id=319, 738.76pt x 355.3275pt>
 File: categories_1.png Graphic file (type png)
 <use categories_1.png>
 Package pdftex.def Info: categories_1.png  used on input line 462.
 (pdftex.def)             Requested size: 369.88582pt x 177.90729pt.
-<categories_2.png, id=309, 736.7525pt x 697.60625pt>
+<categories_2.png, id=320, 736.7525pt x 697.60625pt>
 File: categories_2.png Graphic file (type png)
 <use categories_2.png>
 Package pdftex.def Info: categories_2.png  used on input line 468.
 (pdftex.def)             Requested size: 369.88582pt x 350.22864pt.
-<plot_categories.png, id=310, 1128.215pt x 832.10875pt>
+<plot_categories.png, id=321, 1128.215pt x 832.10875pt>
 File: plot_categories.png Graphic file (type png)
 <use plot_categories.png>
 Package pdftex.def Info: plot_categories.png  used on input line 477.
@@ -800,48 +759,36 @@ Package rerunfilecheck Warning: File `PRA2.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `PRA2.out':
-(rerunfilecheck)             Before: 5F9532646D75D0B4ADAA498309841786;2233
-(rerunfilecheck)             After:  2A35A2F65F2206AE9164E8F444F30F9D;2293.
+(rerunfilecheck)             Before: 47861B58242A17626F03AC8B08A489EB;2292
+(rerunfilecheck)             After:  EC06CA869D0CEDEEE318CF59DA1158F3;2379.
  ) 
 Here is how much of TeX's memory you used:
- 6841 strings out of 480224
- 106240 string characters out of 2879153
- 410519 words of memory out of 3000000
- 23187 multiletter control sequences out of 15000+200000
- 547364 words of font info for 53 fonts, out of 3000000 for 9000
+ 6820 strings out of 480224
+ 105474 string characters out of 2879153
+ 411276 words of memory out of 3000000
+ 23166 multiletter control sequences out of 15000+200000
+ 547815 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,11n,66p,1176b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsection.4.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.4.3} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.6} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.3.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
- <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-1200.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\ecbi1200.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
-n/ec/dpi600\ecbx1440.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour
-/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/p
-k/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Usuario\AppData\Local\MiKTeX
-\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Usuario\AppData\Loca
-l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Usuario\AppD
-ata\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Usua
-rio\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Us
-ers\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk
-> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecr
-m2074.pk><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on PRA2.pdf (28 pages, 2448430 bytes).
+ 60i,11n,66p,1176b,411s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ec
+rm0800.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecbi1200.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecbx1440.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Usuario\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Usuario\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Usuario\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\Us
+uario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\
+Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.
+pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
+crm2074.pk><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmmi12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on PRA2.pdf (28 pages, 2435972 bytes).
 PDF statistics:
- 797 PDF objects out of 1000 (max. 8388607)
- 73 named destinations out of 1000 (max. 500000)
- 422 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 790 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
+ 399 words of extra memory for PDF output out of 10000 (max. 10000000)
 

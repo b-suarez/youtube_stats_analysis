@@ -217,170 +217,170 @@ Para nuestro caso los valores extremos en visitas o cuentas de comentarios marca
 
 \section{An\'alisis de los datos}
 
-\subsection{Selecci\'on datos}
-Primero de todo vamos a eliminar las filas con valores True en los atributos l\'ogicos ya que son minor\'ia y no son estad\'isticas que nos interesen para nuestro analisis.
+\subsection{Selecci\'on de los grupos de datos que se quieren analizar/comparar (planificaci\'on de los análisis a aplicar).}
+
+\subsubsection{V\'ideos con defectos}
+
+De entre todas las columnas destacan unas con valores l\'ogicos:  {\itshape commentsdisabled}, {\itshape ratingsdisabled} y {\itshape video error or removed}, que est\'an marcados indicando alg\'un tipo de carencia. Con el fin de homogeneizar los datos, es decir, hacer que todos nuestros datos provengan de v\'ideos con las mismas caracter\'isticas generales, vamos a eliminar las filas con valores {\itshape True} en cualquiera de estos atributos. Esto se puede ver en la figura \ref{fig:defect}. Tambi\'en se puede observar que en general se conserva m\'as del $96\%$ de la informaci\'on. 
 
 
-
-
-Como podemos ver, eliminando estas columnas mantenemos el 96 porciento de los datos.
-
-Debido a que ya solo nos quedan valores verdaderos para esas 3 columnas (comments{\textunderscore}disabled, ratings{\textunderscore}disabled y video{\textunderscore}error{\textunderscore}or{\textunderscore}removed), vamos a eliminarlas.
 \begin{figure}[h!]
 \centering
-\includegraphics[width=13cm]{data_selection_2.png}
+\includegraphics[width=13cm]{data_selection_2.JPG}
+\caption{Eliminamos las v\'ideos con defectos y comprobamos cuanta informaci\'on se conserva}
+\label{fig:defect}
 \end{figure}
 
 
-\subsection{Eliminamos categor\'ia sin informaci\'on (category = 29)}
+
+
+Debido a que estas columnas solo contienen valores {\itshape FALSE} despu\'es de elimar los {\itshape TRUE}, ya no es relevante conservar estas columnas por lo que se eliminan (esto se puede ver en c\'odigo en la secci\'on {\itshape data cleaning}).
+
+\subsubsection{Eliminamos categor\'ia sin informaci\'on (category = 29)}
 
 No existe informaci\'on sobre que categir\'ia representa el id 29, por lo tanto eliminamos \'esta del dataset. Otra raz\'on para eliminarla es que al no saber que representa dicha categor\'ia, aun en el caso que pudi\'esemos extraer alguna informaci\'on para la categor\'ia 29, no podr\'iamos darle un sentido concreto
 
-A\'un eliminandola, preservamos el 95 porciento de la informaci\'on.
+En la figura \ref{fig:cat29}, se puede ver que despu\'es de eliminar los observaciones de esta categor\'ia, preservamos m\'as del 95 porciento de la informaci\'on.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{remove_category.png}
+\caption{Eliminamos la categor\'ia 29 y comprobamos el porcentaje de informci\'on conservada}
+\label{fig:cat29}
 \end{figure}
 
 
 
 
 
-\section[item_metricas]{Generaci\'on de m\'etricas y an\'alisis de datos}
+\subsubsection[item_metricas]{Generaci\'on de m\'etricas y an\'alisis de datos}
 
-Es complicado analizar nuestros datos ya que no tenemos forma de saber si un video puede ser un outlier, por ejemplo tenemos videos con un gran n\'umero de visitas pero pocos comentarios (lo que llamariamos un click bait), o un video con pocas visitas pero un gran n\'umero de comentarios.
-\\
-Para poder analizar estos sucesos vamos a crear una serie de m\'etricas que nos ayudar\'an a realizar an\'alisis m\'as concretos sobre los v\'ideos.
+Nuestros datos en bruto pueden carecer de sentido sin una referencia; ?`Son dos v\'ideos con el mismo n\'umero de visitas igual de relevantes? o Para dos videos con el mismo n\'umero de likes, ?`Podemos pensar que han despertado el mismo inter\'es?. otro ejemplo ser\'ia tenemos videos con un gran n\'umero de visitas pero pocos comentarios (lo que llamariamos un click bait), o un video con pocas visitas pero un gran n\'umero de comentarios.
 
-\subsection{Generaci\'on m\'etrica video sentiment}
-La metrica relative video sentiment (o rvs) se calcula utilizando la f\'ormula {\itshape (likes-dislikes)/sum(likes+dislikes)} y nos ayudar\'a a hacernos una idea de el sentimiento que genera un video sobre 1.
+Para poder solventar inconveniente de que carecemos de referencias y poder analizar correctamente los v\'ideos, creamos una serie de m\'etricas relativas que nos ayudar\'an a realizar an\'alisis m\'as  de los v\'ideos.
+
+\textbf{Sentimiento relativo:} \\
+La m\'etrica {\itshape relative video sentiment} (rvs) se calcula utilizando la f\'ormula {\itshape (likes-dislikes)/sum(likes+dislikes)} y nos ayudar\'a a hacernos una idea de el sentimiento que genera un video sobre 1. Si el sentimiento que genera el v\'ideo es positivo el valor de rvs ser\'a positivos y si tiene m\'as {\itshape dislikes} el valor de rvs ser\'a negativo. Se puede ver expl\'icitamente el proceso seguido en la figura \ref{fig:rvsform}
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{rvs_gen.png}
+\caption{Ecuaci\'on para generar rvs}
+\label{fig:rvsform}
 \end{figure}
 
-Haciendo un plot de las frecuencias obtenidas sobre esta m\'etrica, nos damos cuenta de que los videos que llegan a ser Trend, tienden a tener un ratio de likes/dislikes de un 75 porciento.
+Haciendo un plot de las frecuencias obtenidas sobre esta m\'etrica, nos damos cuenta de que los videos que llegan a ser {\itshape trending}, tienden a tener m\'as {\itshape likes} que {\itshape likes}. De hecho la mayar\'ia de v\'ideos que llegan a {\itshape ttrending} tienen al menos un $75\%$ de {\itshape likes} frente a {\itshape dislikes}. Esto se puede ver en la figura \ref{fig:rvsgraf}.
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=14cm]{rvs_plot.png}
+\caption{N\'umero de ocurrencias por rvs}
+\label{fig:rvsgraf}
 \end{figure}
 
-\subsection{Generaci\'on m\'etrica relevancia}
-Sabemos que para los usuarios comentar un video conlleva m\'as esfuerzo que darle a like o a dislike. Tambi\'en entendemos que un video tiene mayor cantidad de comentarios cuando los viewers tienen algo que decir sobre el tema o alg\'un comentario a provocado controversia.
+\textbf{M\'etrica relevancia:}\\
+Sabemos que para los usuarios comentar un video conlleva m\'as esfuerzo que hacer click a {\itshape like} o {\itshape dislike}. Tambi\'en entendemos que un video tiene mayor cantidad de comentarios cuando los viewers tienen algo que decir sobre el tema o alg\'un comentario a provocado controversia.
 
-Para medir esto, hemos creado un atributo rel{\textunderscore}elevance, el cual se calcula con la formula {\itshape comment{\textunderscore}count/(likes+dislikes)}. Cuando su valor tiende a 1 asumimos que el video es relevante para los viewers y cuando es mayor que 1 quiere decir que es muy relevante.
+Para medir esto, hemos creado un atributo {\itshape rel{\textunderscore}elevance}, el cual se calcula con la formula {\itshape comment{\textunderscore}count/(likes+dislikes)}. Cuando su valor tiende a 1 asumimos que el video es relevante para los {\itshape viewers} y cuando es mayor que 1 quiere decir que es muy relevante. la geberaci\'on de la m\'etrica se puede ver la figura \ref{fig:relfor}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{rel_gen.png}
+\caption{Ecuaci\'on para generar la m\'etrica de relevancia relativa}
+\label{fig:relfor}
+
 \end{figure}
 
-Haciendo un plot de las frecuencias de este valor, podemos observar que la mayor parte de los videos tiene un valor menor que  1.  De hecho, observamos que los videos que alcanzan Trending tienen a tener un ratio menor que 0.5, alcanzando un pico claro en 0.25.
+Haciendo un plot de las frecuencias de este valor (figura \ref{fig:relfig}), podemos observar que la mayor parte de los videos tiene un valor menor que  1.  De hecho, observamos que los v\'ideos que alcanzan{\itshape trending} tienen a tener un ratio menor que 0.5, alcanzando un pico claro alrededor 0.25.
 
-Esto nos da a entender que los videos que alcanzan Trending no suelen ser muy pol\'emicos en general, lo cual tiene sentido ya que suelen ser videos que atraen a un p\'ublico general.
+Esto nos da a entender que los v\'ideos que alcanzan {\itshape trending} no suelen ser muy pol\'emicos en general, lo cual tiene sentido ya que suelen ser v\'ideos que atraen a un p\'ublico general.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=14cm]{rel_relevance_plot.png}
+\caption{N\'umero de ocurrencias para la relevancia relativa}
+\label{fig:relfig}
+
 \end{figure}
 
-\subsection{Generaci\'on m\'etrica sentiment engagement}
-Por \'ultimo vamos a generar 3 atributos relacionados con el sentiment engagement de los videos, \'estos ser\'an el positive engagement, negative engagement y overall engagement.
+\textbf{M\'etrica sentiment engagement:}
 
-El positive engagement se calcular\'a utilizando la f\'ormula: {\itshape likes/views}
+Por \'ultimo vamos a generar 3 atributos relacionados con el{\itshape sentiment engagement} de los v\'ideos, estos ser\'an el {\itshape positive engagement}, {\itshape negative engagement} y {\itshape overall engagement}.
+\newpage
+Estas m\'etricas se calculan como: \footnote{Los c\'alculos se han realizado de la misma forma que se ha mostrado en la dem\'as m\'etricas. Los detalles pueden verse en el notebook, apratdo m\'etricas.}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{pos_eng_gen.png}
-\end{figure}
+\begin{itemize}
+\item {\itshape Positive engagement} se calcular\'a utilizando la f\'ormula: {\itshape likes/views}
 
-El negative engagement se calcular\'a utilizando la f\'ormula: {\itshape dislikes/views}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{neg_eng_gen.png}
-\end{figure}
+\item {\itshape Negative engagement} se calcular\'a utilizando la f\'ormula: {\itshape dislikes/views}
 
-El overall engagement se calcular\'a utilizando la f\'ormula: {\itshape (likes-dislikes)/views}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=13cm]{ove_eng_gen.png}
-\end{figure}
 
-Realizando un plot de las frecuencias, es f\'acil darse cuenta de que la tendencia en todos los pa\'ises es que m\'as de el 75\% de los videos est\'n en un rango de [0-10\%] rvs (likes-dislikes) por visualizaci\'on del video.
+\item {\itshape Overall engagement} se calcular\'a utilizando la f\'ormula: {\itshape (likes-dislikes)/views}
+
+\end{itemize}
+
+Al representar sus frecuencias (figura \ref{fig:rengan}) podemos ver que los v\'ideos {\itshape trending} tienen un n\'umero de {\itshape likes} o {\itshape dislikes} muy peque\~no en comparaci\'on con las visualizaciones. De hecho la mayor\'ia  de ellos apenas tienen un $10\%$ de {\itshape likes} en comparaci\'on con las views. Y la mayor\'ia de las views son {\itshape likes}. Esto \'ultimo es m\'as evidente en la curva  para {\itshape Overall engagement} que para todos los casos, est\'a m\'as desplazada hacia el lado de los valores positivos.
+
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{engagement_1.png}
-\end{figure}
-
-\begin{figure}[h!]
-\centering
 \includegraphics[width=13cm]{engagement_2.png}
+\caption{N\'umero de ocurrencias para cada {\itshape sentiment engagement}}
+\label{fig:rengan}
 \end{figure}
 
-\subsection{Comprobaci\'on de normalidad}
+\subsection{Comprobaci\'on de la normalidad y homogeneidad de la varianza.}
 
-Nuestro daset presenta dos dificultades a la hora de comprobar si los datos y las m\'etricas sigen una distribuci\'on normal. Por una parte el gran n\'umero de datos hace inviable la aplicaci\'on del test de normalidad de {\itshape  Shapiro Wilk}, por otra parte, al existir muchos valores repetidos para un atributo el test de {\itshape Anderson Darling} no es fiable ya que siempre devolver\'a como resultado el rechazo de la hip\'otesis nula. Por este motivo nos centramos en los valores de {\itshape Kurosis} y {\itshape Skewness}. Para estos test, t\'ipicamnete se considera que una distribuci\'on es normal cuando el valor de {\itshape Kurtosis} est\'a entre $-2$ y $+2$ y para {\itshape skewness} los valores deben caer dentro del intervalo entre $-0.8$ y $+0.8$.
+Nuestro daset presenta dos dificultades a la hora de comprobar si los datos y las m\'etricas siguen una distribuci\'on normal. Por una parte el gran n\'umero de datos hace inviable la aplicaci\'on del test de normalidad de {\itshape  Shapiro Wilk}, por otra parte, al existir muchos valores repetidos para un atributo el test de {\itshape Anderson Darling} no es fiable ya que siempre devolver\'a como resultado el rechazo de la hip\'otesis nula. Por este motivo nos centramos en los valores de {\itshape Kurosis} y {\itshape Skewness}. Para estos test, t\'ipicamnete se considera que una distribuci\'on es normal cuando el valor de {\itshape Kurtosis} est\'a entre $-2$ y $+2$ y para {\itshape skewness} los valores deben caer dentro del intervalo entre $-0.8$ y $+0.8$.
 
-Podemos comprobar que tanto los valores de los datos en crudo, como las m\'etricas que hemos implementado no siguen una distribuci\'on normal. Con el fin de solucionar este problema y conseguir una distribuci\'on homogenea de la varianza, hemos optado por utilizar en primera instancia una transformaci\'on de {\itshape Yeo Jhonson}, puesto que nos permite aplicar el mismo c\'odigo sobre todos los atributos (una transformaci\'on de {\itshape Yeo Jhonson} a diferencia de {\itshape Boxcox} nos permite trabajar con valores negativos y ceros).
+Hemos creado una funci\'on {\itshape normal check} que nos devuelve 1 cuando los datos de un atributo siguen una distribuci\'on normal (en las condiciones especificadas arriba) y 0 cuando no la sigue. La hemos aplicado sobre todas las columnas de todas los datasets y los datos los hemos visualizado como un dataframe que se copia abajo (los detalles de la funci\'on se encuentran el notebook).
 
-\begin{verbatim}
-# transform and save data &  lambda value 
+Podemos comprobar que tanto los valores de los datos en crudo, como las m\'etricas que hemos implementado no siguen una distribuci\'on normal (figura \ref{fig:norm_1}). Con el fin de solucionar este problema y conseguir una distribuci\'on homogenea de la varianza, hemos optado por utilizar en primera instancia una transformaci\'on de {\itshape Yeo Jhonson}, puesto que nos permite aplicar el mismo c\'odigo sobre todos los atributos (una transformaci\'on de {\itshape Yeo Jhonson} a diferencia de {\itshape Boxcox} nos permite trabajar con valores negativos y ceros).
 
-fitted_data = []
-fitted_lambda = {}
 
-names=['views','likes','dislikes','comment_count','rvs','rel_relevance','overall_sentiment_engagement']
-names_fitted=['fviews','flikes','fdislikes','fcomment_count','frvs','frel_rel','foverall_sen_eng']
-country=['Germany','Great Britain','Mexico','United States of America']
 
-for j,odata in enumerate(original_data):
-
-  lambda_list= []
-
-  for i,col in enumerate(names):
-    
-    fdata, lambda_val = stats.yeojohnson(odata.loc[:,col])
-
-    odata[names_fitted[i]]=fdata
-    lambda_list.append(lambda_val)
-  
-  fitted_lambda[country[j]]=lambda_list
-
-\end{verbatim}
-
-Hemos creado una funci\'on {\itshape normal check} que nos devuelve 1 cuando los datos de un atributo siguen una distribuci\'on normal (en las condiciones especificadas arriba) y 0 cuando no la sigue. La hemos aplicado sobre todas las columnas de todas los datasets y los datos los hemos visualizado como un dataframe que se copia abajo:
 
 \begin{figure}
 \centering
 \includegraphics[width=12cm]{dataframe_1.JPG}
 \includegraphics[width=12cm]{dataframe_2.JPG}
+\caption{Comprobaci\'on de normalidad}
+\label{fig:norm_1}
 \end{figure}
  
-Como se puede ver los datos en crudo se han podido transformar de forma que ahora siguen una distribuci\'on normal, pero las m\'etricas no siguen todav\'ia una distribuci\'on normal.
+Como se puede ver los datos en crudo se han podido transformar de forma que ahora siguen una distribuci\'on normal (figura \ref{fig:norm_1}). Los datos transformados se guardan en las columnas {\itshape fviews}, {\itshape likes}, {\itshape dislikes} y {\itshape fcommentl{\textunderscore}count}. Adem\'as los valores de lambda tambi\'en se guardan para poder deshacer la transformaci\'on (se pueden ver todos los detalles en el notebook en el apartado {\itshape Power transformation and descriptive statistics for the metrics}).
 
-Con el fin de corregir este hecho hemos realizado una transformaci\'on por quantiles sobre las m\'etricas  y obtenido los siguientes resultados.
+Sin embargo, las m\'etricas no siguen todav\'ia una distribuci\'on normal. Intentamos corregir este hecho hemos realizado una transformaci\'on por quantiles sobre las m\'etricas. Los nombres asociados a los datos de las m\'etricas trasnformados por quartiles son : {\itshape q{\textunderscore}rvs}, {\itshape q{\textunderscore}rel{\textunderscore}rel} y{\itshape q{\textunderscore}overall{\textunderscore}sen{\textunderscore}eng}. Una vez hechas las transformaciones, volvemos aplicar la funci\'on implementada para el c\'alculo de la normalidad de los atributos y representamos los resultados en un dataframe que se puede ver en la figura \ref{fig:quar}.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=12cm]{dataframe_3.JPG}
+\caption{Transformaci\'on por quartiles para las m\'etricas}
+\label{fig:quar}
 \end{figure}
 
-Con el fin de comprobar la discrepancia presente en los datos de {\itshape M\'exico} hemos hecho una representaci\'on de densidades para la los datos {\itshape q\_overall\_sen\_eng}, es decir los datos que cuya variable  ha sufrido una transformaci\'on por quantiles.
+Se ve una discrepancia en los datos de {\itshape M\'exico}. Hacemos un gr\'afico de densidades para la los datos {\itshape q\_overall\_sen\_eng}, es decir los datos que cuya variable  ha sufrido una transformaci\'on por quantiles.
 
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5cm]{grafica_transformada.JPG}
+\caption{G\'afico de densidades para {\itshape q{\textunderscore}overall{\textunderscore}sen{\textunderscore}eng}}
+\label{fig:quart_2}
 \end{figure}
 
-En esta curva no podemos apreciar ninguna diferencia significativa entre las curvas para cada pa\'is.
+En la curva de la figura \ref{fig:quart_2}, no podemos apreciar ninguna diferencia significativa entre las curvas para cada pa\'is.
 
-En conclusi\'on ahora contamos con los datos transformados en crudo v\'ia {\itshape Yeo\-Jhonson} que siguen una distribuci\'on normal y la m\'etrica {\itshape overall\_sent\_eng} que transformada por quartiles tambi\'en sige una distribuci\'on normal por lo que podremos aplicar test de correlaci\'on, modelos de regresi\'on y otros test estad\'isticos para m\'etricos.
+En conclusi\'on ahora contamos con los datos transformados  v\'ia {\itshape Yeo\-Jhonson} que siguen una distribuci\'on normal y la m\'etrica {\itshape overall\_sent\_eng} que transformada por quartiles tambi\'en sigue una distribuci\'on normal por lo que podremos aplicar test de correlaci\'on, modelos de regresi\'on y otros test estad\'isticos para m\'etricos.
 
-\section[item_pruebas]{Pruebas estad\'isticas}
+Como nota final tambi\'en se ha investigado la normalidad de las deltas de tiempo, su distribuci\'on no es normal. Tampoco se ha podido alcanzar una distribuci\'on normal ni usando transformaciones exponenciales, ni usando transformaciones por quartiles (el c\'odigo con los c\'alculos se encuentran en el notebook)
+
+\subsection[item_pruebas]{Aplicaci\'on de pruebas estad\'isticas para comparar los grupos de datos. En funci\'on de los datos y el objetivo del estudio, aplicar pruebas de contraste de hip\'otesis, correlaciones, regresiones, etc. Aplicar al menos tres m\'etodos de an\'alisis diferentes.}
+
+
+\subsubsection{M\'etodo 1: Correlaci\'on}
+
 \subsection{Cu\'ales son las 50 palabras m\'as populares por pa\'is y atributo}
 
 Una de las formas que tenemos de seguir o analizar tendencias en videos de YouTube, es contar las palabras en los diferentes atributos de los videos.
