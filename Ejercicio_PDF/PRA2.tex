@@ -374,86 +374,120 @@ En la curva de la figura \ref{fig:quart_2}, no podemos apreciar ninguna diferenc
 
 En conclusi\'on ahora contamos con los datos transformados  v\'ia {\itshape Yeo\-Jhonson} que siguen una distribuci\'on normal y la m\'etrica {\itshape overall\_sent\_eng} que transformada por quartiles tambi\'en sigue una distribuci\'on normal por lo que podremos aplicar test de correlaci\'on, modelos de regresi\'on y otros test estad\'isticos para m\'etricos.
 
-Como nota final tambi\'en se ha investigado la normalidad de las deltas de tiempo, su distribuci\'on no es normal. Tampoco se ha podido alcanzar una distribuci\'on normal ni usando transformaciones exponenciales, ni usando transformaciones por quartiles (el c\'odigo con los c\'alculos se encuentran en el notebook)
+Como nota final tambi\'en se ha investigado la normalidad de las deltas de tiempo y su distribuci\'on no es normal. Pero se ha podido alcanzar una distribuci\'on normal usando transformaciones exponenciales (el c\'odigo con los c\'alculos se encuentran en el notebook; apartado {\itshape How long does it take for a Video to get trending?} sub apartado {\itshape power transformation}).
 
 \subsection[item_pruebas]{Aplicaci\'on de pruebas estad\'isticas para comparar los grupos de datos. En funci\'on de los datos y el objetivo del estudio, aplicar pruebas de contraste de hip\'otesis, correlaciones, regresiones, etc. Aplicar al menos tres m\'etodos de an\'alisis diferentes.}
 
 
 \subsubsection{M\'etodo 1: Correlaci\'on}
 
-\subsection{Cu\'ales son las 50 palabras m\'as populares por pa\'is y atributo}
+Una vez normalizado los datos podemos aplicar el m\'etodo de correlaci\'on de {\itshape Pearson}. En la figura \ref{fig:corrplot} es interesante ver que los atributos transformados presentan una alta correlaci\'on. Si ahora nos fijamos en los atributos sin transformar esta correlaci\'on aunque alta no es tan marcada como en los atributos transformados.  La alta correlaci\'on tambi\'en apunta al hecho que es factible esperar encontrar una relazi\'on lineal entre atributos transformados.
+ 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{Correlation.JPG}
+\caption{G\'afico de correlaciones para todos los atributos}
+\label{fig:corrplot}
+\end{figure}
 
-Una de las formas que tenemos de seguir o analizar tendencias en videos de YouTube, es contar las palabras en los diferentes atributos de los videos.
+\subsubsection{M\'etodo 2: Modelos de regresi\'on}
 
-En nuestro caso, vamos a contar las palabras en los titulos de los videos, comentarios, descripciones y canales.
-
-Para empezar vamos a cargar los datos con los textos ya transformados y limpios.
-\\
-\\
-\includegraphics[width=13cm]{50_words_1.png}
-\\
-
-Una vez tenemos los datos cargados, vamos a encontrar las 50 palabras mas populares para cada atributo del video.
+En este punto nuestro objetivo es construir un modelo que nos permita predecir el n\'umero de {\itshape views} en funci\'on de otras variables. En este sentido, como muestra la figura \ref{fig:regre}, los atributos se han dividido en tres grupos:
 
 \begin{figure}[h!]
 \centering
-\includegraphics[width=12cm]{50_words_title.png}
-\includegraphics[width=12cm]{50_words_channel.png}
-\includegraphics[width=12cm]{50_words_tags.png}
-\includegraphics[width=12cm]{50_words_desc.png}
+\includegraphics[width=10cm]{col.JPG}
+\caption{Divisi\'on de atributos para el c\'alculo de modelos de regresi\'on}
+\label{fig:regre}
 \end{figure}
 
-Por \'ultimo, vamos a realizar un wordcloud de los datos obtenidos.
 
-Empezamos con los wordcloud de las tags.
+\begin{itemize}
 
-Como podemos ver,  en alemania hay varias palabras en turco, esto se debe a la gran inmigraci\'on Turca que existe en el pais. Esto provoca que los datos est\'en divididos en turco y alem\'an.
-\\
-\\
-El resto de wordclouds son bastante claros, a destacar en el Mejicano, que podemos ver la TV Azteca y exatlon, que es un programa de gran \'exito en el pais.
-\\
-\\
-\includegraphics[width=13cm]{wordcloud_tags.png}
-\\
-\\
-A continuaci\'on mostraremos el wordcloud de los t\'itulos de los videos.
-\\
-\\
-A destacar que la palabra trump aparece m\'as en Alemania que en EEUU. Los videos musicales parecen ser muy populares. Los videos de f\'utbol y otros deportes son mucho mas populares en M\'ejico que en el resto de pa\'ises. Los vengadores y Star Wars tienen bastante impacto en UK y EEUU.
-\\
-\\
-\includegraphics[width=13cm]{wordcloud_title.png}
-\\
-\\
-Por \'ultimo vamos a mostrar las palabras mas utilizadas en las descripciones de los videos.
-Como se puede observar, lo que mas se ven son nombres de redes sociales y webs, esto se debe a que la mayor\'ia de creadores de contenido introducen sus redes sociales en la descripci\'on. Para poder obtener informaci\'on relevante de \'esta wordcloud necesitamos realizar m\'as tareas de limpieza.
-\\
-\\
-\includegraphics[width=13cm]{wordcould_desc.png}
+\item {\itshape not{\textunderscore}trans{\textunderscore}raw}: Donde se hace uso de los datos en crudo para intentar predecir el n\'umero de {\itshape views}
+
+\item {\itshape not{\textunderscore}trans{\textunderscore}met}: Donde se hace uso de las m\'etricas para intentar predecir el n\'umero de {\itshape views}
+
+\item {\itshape trans{\textunderscore}atr}: Donde se hace uso de los datos transformados para poder predecir el n\'umero de {\itshape views} (transformadas).
+
+\end{itemize}
+
+A continuaci\'on se deja el $85\%$ de los datos para entrenar los modelos, y el resto para hacer el test. Los modelos que se han implementado se pueden ver en la figura \ref{fig:model1}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{modelos_1.JPG}
+\caption{Divisi\'on de los datos en train y test e implementaci\'on de modelos}
+\label{fig:model1}
+\end{figure}
+
+Los volares que obtenemos para $R^{2}$-ajustado son: $0.752$ para {\itshape model{\textunderscore}raw{\textunderscore}1}, 0.001 para  {\itshape model{\textunderscore}metric{\textunderscore}1} y 0.953 para  {\itshape model{\textunderscore}trans{\textunderscore}1}.
+
+A tenor de estos resultados se escoge como mejor modelo: {\itshape model{\textunderscore}trans{\textunderscore}1}. Este modelo usa los atributos que han sufrido una transformaci\'on para que los atributos tengan una distribuci\'on normal. Los atributos tambi\'en presentaban una alta correlaci\'on. Con el fin de otorgar sentido al {\itshape intercept}, tambi\'en se hace el modelo con los datos centrados y escalados. De esta forma el {\itshape intercept} representa el valor de {\itshape fviews} cuando todos los atributos tienen un valor igual a su media. En cualquier caso, el valor de $R^{2}$ ajustado se mantiene constante tanto para el modelo que usa los datos escalados como el que no. Por este motivo mostramos el {\itshape summary} del modelo con los datos escalados y centrados (figura \ref{fig:summ}) .
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{summa.JPG}
+\caption{Resumen del modelo {\itshape model{\textunderscore}trans{\textunderscore}1}}
+\label{fig:summ}
+\end{figure}
+
+
+En la figura  \ref{fig:summ}, se puede ver que el atributo {\itshape fdislikes} no supera el valor t\'ipico para otorgarle relevancia estad\'istica. Por lo que hemos repetido el modelo, pero esta vez sin el atributo {\itshape fdislikes}. Al modelo que cuenta con la variable {\itshape fdislikes} es al que llamamos modelos completo y al modelo que no cuenta con la variable {\itshape fdislikes} lo llamamos reducido. Tanto el modelo completo como el reducido tienen el mismo valor de $R^{2}$ajustado. Con el fin de comprobar formalmente si un modelo es mejor que otro se ha hecho una prueba {\itshape anova} sobre ambos modelos (figura \ref{fig:anov}).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=10cm]{anova_modelos.JPG}
+\caption{Anova sobre el modelo completo y el reducido}
+\label{fig:anov}
+\end{figure}
+
+En la figura \ref{fig:anov} se puede ver que el valor de p es lo suficientemente alto como para no poder rechazar la hip\'otesis nula. Por lo no podemos decir que los dos modelos sean diferentes. En este caso elegimos el modelo reducido ya que tienen menos variables y nos ofrecer\'a los mismo resultados.
+
+Por \'ultimo hemos querido comprobar la capacidad predictiva de nuestros modelos, y se ha calculado el valor RMSE (desviaci\'on de m\'inimos cuadrdos), tanto para el modelo de datos en crudo como para el modelo reducido (que usa los atributos transformados), sobre sus respectivos {\itshape test sets}. Adem\'as con el fin de poder establecer una comparaci\'on entre ambos valores el valor de RMSE se ha dividido por los respectivos valores m\'aximos de {\itshape views} y {\itshape fviews} de los {\itshape test sets}.
+
+Para el caso del modelo con datos en crudo hemos encontrado un valore de RMSE de $925483$ y al dividirlo por su m\'aximo $19972$ (la desviaci\'on es casi 20000 mayor que la propia medida). 
+
+Para el modelo reducido tenemos un RMSE de $0.1830192$ y al dividirlo por el valor m\'aximo $0.0553140$. El hecho de que el valor relativo sea menor que uno ya es indicativo que la desciaci\'on es inferior a la medida.  
+
+\subsubsection{M\'etodo 3: Pruebas de contraste de hip\'otesis}
+
+En este punto nos preguntamos que conjunto de categor\'ias de v\'ideos tienen medias de n\'umero de visualizaciones similares estad\'isticamente (no se puede rechazar la hip\'otesis nula). Una forma de comprobar esto es realizar comprobaciones por pares (hecho en el c\'odigo del notebook), sin embargo, tal y como recoge el material que proporciona la UOC para la asignatura de estad\'istica avanzada corremos el riesgo de aceptar alg\'un resultado significativo incluso cuando todos no lo son. Una las alternativas que se proponen es usar una correcci\'on conservadora (Bonferroni). El paquete {\itshape agricolae} que implementa esta correci\'on tiene adem\'as la ventaja que ya nos codifica con las mismas letras los grupos para los que no existe diferencia. En la figura \ref{fig:Berro} se puede ver el resultado para Mexico (aunque en el c\'odigo del notebook est\'an los resultados para todos los pa\'ises).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=6cm]{Berro.JPG}
+\caption{Agrupaci\'on de categorias similares codificadas por letras para Mexico}
+\label{fig:Berro}
+\end{figure}
+
+\section{Representaci\'on de los resultados a partir de tablas y gr\'aficas.}
+
 
 \subsection{Cu\'anto tarda un video en llegar a Trending}
-Para analizar cu\'anto tarda un video en llegar a Trending, vamos a generar una nueva columna con este valor, que calcularemos restando la fecha de Trending con la fecha de publicaci\'on.
-\\
-\\
-\includegraphics[width=13cm]{time_delta_gen.png}
-\\
-\\
-Una vez tenemos estos datos, vamos a realizar un plot de frecuencias para el n\'umero de videos por dias que tarda en llegar a trending.
-\\
-\\ 
-\includegraphics[width=13cm]{plot_freq_times.png}
-\\
-\\
-Con estas gr\'aficas podemos ver que la mayor\'ia de videos llegan a trending en los primeros d\'ias tras su lanzamiento. Para hacernos una mejor idea vamos a realizar un plot de que porcentajes de videos llegan a trending en diferentes rangos de tiempo.
-\\
-\\ 
+
+Como ya hemos apuntado en la secci\'on sobre el tratamiento de {\itshape outliers}, m\'as del $95\%$ de los v\'ideos llegan a {\itshape trending} en los primeros 40 d\'ias. Con el fin de poder visualizar m\'as claramente  los deltas de tiempo, en la figura \ref{fig:tiempo_2} mostramos como hemos dividido los v\'ideos en intervalos de tiempo seg\'un si tardan entre [0 , 1], (1,2], (2,5], (5,7], (7, 10] (10, 15], (15,30] y (30, 40] d\'ias en llegar a {\itshape trending}. Luego hemos calculado el porcentaje de los v\'ideos con respecto al total.
+
+\begin{figure}[h!]
+\centering
 \includegraphics[width=13cm]{plot_freq_code.png}
-\\
-\\ 
+\caption{Implementaci\'on de la divisi\'on del tiempo en intervalos y c\'alculo de porcentaje}
+\label{fig:tiempo_2}
+\end{figure}
+
+
+
+Los datos mostrados representanen la figura \ref{fig:tiempo_3}  un 98\% de los videos. Estos resultados son muy interesantes ya que nos dan una idea de cuando tarda algo en hacerse popular en un los diferentes paises, cada cuanto utilizan la plataforma los usuarios en los diferentes paises, o cuanto tarda un usuario en ver algo fuera de sus intereses habituales. Por ejemplo en Gran Breta\~na es razonable esperar que un v\'ideo puedo tardar hasta 30 d\'ias en hacerse {\itshape trending}. Para Alemania y Mexico, si el v\'ideo no se ha hecho {\itshape trending} en cinco d\'ias, sus posibiliades de llegar a {\itshape a trending} caen r\'apidamente.
+
+\begin{figure}[h!]
+\centering
 \includegraphics[width=13cm]{plot_freq_perc.png}
-\\
-\\
-Los datos mostrados representan un 98\% de los videos. Estos resultados son muy interesantes ya que nos dan una idea de cuando tarda algo en hacerse popular en un los diferentes paises, cada cuanto utilizan la plataforma los usuarios en los diferentes paises, o cuanto tarda un usuario en ver algo fuera de sus intereses habituales.
+\caption{Intervalos de tiempo y porcentaje de v\'ideos}
+\label{fig:tiempo_3}
+\end{figure}
+
+
+
 \subsection{Qu\'e categor\'ias tienen m\'as \'exito en cada pa\'is}
 
 Para realizar visualizaciones correctas sobre las categorias de los videos, vamos crear una columna con el nombre de la categor\'ia del video (ahora mismo solo teniamos sus ids).
@@ -476,12 +510,129 @@ Otro dato que me ha parecido muy interesante es como los videos musicales son mu
 \\
 \includegraphics[width=13cm]{plot_categories.png}
 
-\subsection{Modelo de Regresi\'on}
-\'Esta secci\'on se ha realizado en R a diferencia de el resto de la pra\'actica que est\'a desarrollada en Python.
+\subsection{NLP}
+
+Con el fin de no sobrecargar el trabajo hemos eliminado del ejercicio escrito el c\'alculo de las 50 palabras m\'as relevantes  para cada atributo. As\'i como el an\'alisis de sentimiento para los t\'itulos y el de polaridad. Sin embargo todo el proceso est\'a detallado en el notebook en el apartado {\itshape some NLP}. 
+Cabe destacar que hemos encontrado varios problemas en an\'alisis de los textos del dataset Alem\'an. Esto se debe a que en Aleman\'ia hay una fuerte componente de inmigraci\'on turca, y muchos v\'ideos tienen t\'itulos, comentarios y tags en turco, eso \'unido a la pobre codificaci\'on del texto de base y que no entendemos turco nos dificulta extraer resultados satisfactorios del dataset alem\'an.
+
+\subsubsection{Worcloud de n-gramas}
+
+A trav\'es del an\'alisis del {\itshape document-term Matrix} y utilizando el c\'odigo que se presenta en la figura \ref{fig:colud_1}  hemos podido extraer {\itshape word clouds} con sentido para los atributos de texto de cada pa\'is.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{cod_word.JPG}
+\caption{C\'odigo para generar las {\itshape word clouds}}
+\label{fig:colud_1}
+\end{figure}
+
+Las \textbf{tags} se pueden ver en la figura \ref{fig:colud_2}.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{wordcloud_tags.png}
+
+\caption{{\itshape Word clouds} para el atributo tag por pa\'is}
+\label{fig:colud_2}
+\end{figure}
+
+Destacar en el Mexicano, que podemos ver la TV Azteca y exatlon, que es un programa de gran \'exito en el pais (de TV Azteca). En usa parece que {\itshape makeup tutorial} es importante. On Gran Breta\~na {\itshape Star Wars} o {\itshape Black panther} (en este momento cabe destacar que estos datos son del 2017)
+
+Los \textbf{t\'itulos} de los v\'ideos los podemos ver la figura \ref{fig:colud_3}.  
 
 
 
-\section[item_conclusiones]{Conclusiones}
+\begin{figure}[h!]
+\centering
+\includegraphics[width=13cm]{wordcloud_title.png}
+\caption{{\itshape Word clouds} para el atributo t\'itulo por pa\'is}
+\label{fig:colud_3}
+\end{figure}
+
+A destacar que la palabra Trump aparece m\'as en lo t\'itulos de Alemania que en EEUU. Los v\'ideos musicales parecen ser muy populares. Los v\'ideos de f\'utbol y otros deportes son mucho mas populares en M\'exico que en el resto de pa\'ises. Los vengadores y Star Wars tienen bastante impacto en UK y EEUU.
+
+Por \'ultimo, en la figura \ref{fig:colud_4},  mostramos las palabras mas utilizadas en las \textbf{descripciones} de los videos.
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=13cm]{wordcould_desc.png}
+\caption{{\itshape Word clouds} para el atributodescripci\'on  por pa\'is}
+\label{fig:colud_4}
+\end{figure}
+
+Como se puede observar, lo que mas se ven son nombres de redes sociales y webs, esto se debe a que la mayor\'ia de creadores de contenido introducen sus redes sociales en la descripci\'on. Para poder obtener informaci\'on relevante de \'esta wordcloud necesitamos realizar m\'as tareas de limpieza.
+
+\subsubsection{Uso de vocabulario}
+Una de las cuestiones que nos planteábamos al presentar los objetivos de la pr\'actica es si pod\'iamos encontrar diferencias en el uso del vocabulario de dos pa\'ises donde se hable la misma lengua.
+
+Para realizar este an\'alisis se han contado todas las palabras que al menos ocurren una vez en el {\itshape document term Matrix} de los datasets de Gran Breta\~na y EEUU. Como podemos ver en la figura \ref{fig:voc} de la izquierda en ambos pa\'ises se usan la misma cantidad de palabras \'unicas. Sin embargo cuando nos preguntamos por la diversidad del vocabulario, es decir, en que pa\'is se usa una variedad m\'as amplia de palabras vemos que la diferencia entre Gran Breta\~na y EEUU es bastante notable. En EEUU hay muchas m\'as palabras que aparecen m\'as e 100 veces, por lo que el vocabulario de EEUU se encuentra m\'as concentrado en un n\'umero de palabras m\'as reducido que si lo comparamos con el vocabulario de Gran Breta\~na (figura \ref{fig:voc} derecha). 
+
+
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=5cm]{coc_comp.JPG}
+\includegraphics[width=5cm]{dif_voc.JPG}
+\caption{Diferencias en vocabulario}
+\label{fig:voc}
+\end{figure}
+
+\section[item_conclusiones]{Resoluci\'on del problema. A partir de los resultados obtenidos, ?`cu\'ales son las conclusiones? ?`Los resultados permiten responder al problema?}
+
+Siguiendo el esquema de preguntas que nos plante\'abamos al principio de la pr\'actica:
+\begin{itemize}
+
+\item  ?` qu\'e categorias son mas populares en cada mercado? Aqu\'i adem\'as de decir que categorias son mas relevantes tambien puedes decir cuales son estad\'isticamnete similares
+
+\item ?` cu\'anto tarda un video en hacerse Trending?
+\begin{itemize}
+\item depende fuertemente el pa\'is. De los pa\'ises investigados hasta 30 d\'ias es razonable para Gran Breta\~na. Para el resto, despu\'es de cinco d\'ias de su publicaci\'on la cantidad de v\'ideos que llegan a {\itshape a trending se reduce exponencialmente}
+\end{itemize}
+\item ?`Cuales son las palabras m\'as utilizadas?
+\begin{itemize}
+\item Aunque no est\'a incluido en el texto si en el c\'odigo. Se han generado diccionarios con las 50 palabras m\'as utilizadas para los distintos atributos de texto de cada pa\'is. Como curiosidad la palabra que m\'as aparece en los t\'itulos de Gran Breta\~na es Tyron: profesional Americano de artes marciales mixtas y comentarista deportivo.
+\end{itemize}
+\item ?`Cuales son las tags m\'as relevantes?
+\begin{itemize}
+\item Cabe destacar {\itshape makeup tutorial} para EEUU por lo singular de la tag.
+\item De forma general para Gran Breta\~na y EEUU {\itshape Star Wars}, videos musicales, {\itshape Super bowl} y temas relacionados con los Vengadores
+\item para Mexico principalmente Tv azteca o Real Madrid  
+\end{itemize}
+\item ?`Cuales son las temas m\'as importantes?
+\begin{itemize}
+\item Cine en especial las dos franquicias mencionadas.
+\item M\'usica en especial hip hop y v\'ideos musicales
+\item Deportes
+\item Tambi\'en se pueden ver otros temas que van desde pol\'itica a dragon Ball .
+\end{itemize}
+\item ?`Existen diferencias en el vocabulario que se utilizan los pa\'ises que hablan la misma lengua?
+\begin{itemize}
+\item Si, en EEUU el vocabulario se encuentra concentrado en n\'umero m\'as reducido de palabras si lo comparamos con el caso de Gran Breta\~na.
+\end{itemize}
+
+\item ?`Cual es el sentimiento y la polaridad expresada en los t\'itulos?
+\begin{figure}[h!]
+\centering
+
+\includegraphics[width=10cm]{Sent.JPG}
+\includegraphics[width=10cm]{pol.JPG}
+\caption{Sentimiento arriba, polaridad abajo}
+\label{fig:sentpol}
+\end{figure}
+\begin{itemize}
+\item Como se puede ver en la figura \ref{fig:sentpol}, los t\'itulos de los v\'ideos que llegan a {\itshape trending} suelen describir hechos y expresan un sentimiento en su mayor\'ia neutro.
+\end{itemize}
+\item ?`Podemos modelar en n\'umero de veces que un v\'ideo se ve y establecer un modelo predictivo?
+
+\begin{itemize}
+
+\item Si, aunque un estudio en m\'as detalle ser\'ia necesario
+\end{itemize}
+\end{itemize}
+
 Hemos obtenido m\'ultiples conclusiones muy interesantes, hemos visto c\'omo los diferentes pa\'ises interact\'uan con los videos, ya sea desde el punto de vista de como reaccionan a ellos o cu\'ales son los m\'as populares.
 \\
 \\

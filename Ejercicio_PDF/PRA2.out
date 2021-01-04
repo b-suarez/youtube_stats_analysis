@@ -20,8 +20,12 @@
 \BOOKMARK [2][-]{subsection.4.2}{Comprobaci\363n de la normalidad y homogeneidad de la varianza.}{section.4}% 20
 \BOOKMARK [2][-]{subsection.4.3}{itempruebas}{section.4}% 21
 \BOOKMARK [3][-]{subsubsection.4.3.1}{M\351todo 1: Correlaci\363n}{subsection.4.3}% 22
-\BOOKMARK [2][-]{subsection.4.4}{Cu\341les son las 50 palabras m\341s populares por pa\355s y atributo}{section.4}% 23
-\BOOKMARK [2][-]{subsection.4.5}{Cu\341nto tarda un video en llegar a Trending}{section.4}% 24
-\BOOKMARK [2][-]{subsection.4.6}{Qu\351 categor\355as tienen m\341s \351xito en cada pa\355s}{section.4}% 25
-\BOOKMARK [2][-]{subsection.4.7}{Modelo de Regresi\363n}{section.4}% 26
-\BOOKMARK [1][-]{section.5}{itemconclusiones}{}% 27
+\BOOKMARK [3][-]{subsubsection.4.3.2}{M\351todo 2: Modelos de regresi\363n}{subsection.4.3}% 23
+\BOOKMARK [3][-]{subsubsection.4.3.3}{M\351todo 3: Pruebas de contraste de hip\363tesis}{subsection.4.3}% 24
+\BOOKMARK [1][-]{section.5}{Representaci\363n de los resultados a partir de tablas y gr\341ficas.}{}% 25
+\BOOKMARK [2][-]{subsection.5.1}{Cu\341nto tarda un video en llegar a Trending}{section.5}% 26
+\BOOKMARK [2][-]{subsection.5.2}{Qu\351 categor\355as tienen m\341s \351xito en cada pa\355s}{section.5}% 27
+\BOOKMARK [2][-]{subsection.5.3}{NLP}{section.5}% 28
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Worcloud de n-gramas}{subsection.5.3}% 29
+\BOOKMARK [3][-]{subsubsection.5.3.2}{Uso de vocabulario}{subsection.5.3}% 30
+\BOOKMARK [1][-]{section.6}{itemconclusiones}{}% 31
