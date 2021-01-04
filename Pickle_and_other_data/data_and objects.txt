@@ -1,0 +1,11 @@
+Spanish Stop Words:
+https://drive.google.com/file/d/1TtHUPs223I4-Mo5bU-n3jSyBGSo52y5n/view?usp=sharing
+
+German Stop Words:
+https://drive.google.com/file/d/1S5NIw2P0w-x46tvme9dYlTQGG7iYcCja/view?usp=sharing
+
+pickle for data_treat:
+https://drive.google.com/file/d/1-ioJbCqEy4XkTWYsk2OUy8N0WCcJf-EF/view?usp=sharing
+
+Raw data:
+https://drive.google.com/file/d/1HIiQYbgzpBy5qC6JpdDBl4-7twfSAgGK/view?usp=sharing
