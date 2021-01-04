@@ -13,7 +13,7 @@
 \BOOKMARK [3][-]{subsubsection.3.3.2}{Stop Words para el document-Term Matrix}{subsection.3.3}% 13
 \BOOKMARK [2][-]{subsection.3.4}{Identificaci\363n y tratamiento de valores extremos}{section.3}% 14
 \BOOKMARK [1][-]{section.4}{An\341lisis de los datos}{}% 15
-\BOOKMARK [2][-]{subsection.4.1}{Selecci\363n de los grupos de datos que se quieren analizar/comparar \(planificaci\363n de los an\303\241lisis a aplicar\).}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.1}{Selecci\363n de los grupos de datos que se quieren analizar/comparar \(planificaci\363n de los an\341lisis a aplicar\).}{section.4}% 16
 \BOOKMARK [3][-]{subsubsection.4.1.1}{V\355deos con defectos}{subsection.4.1}% 17
 \BOOKMARK [3][-]{subsubsection.4.1.2}{Eliminamos categor\355a sin informaci\363n \(category = 29\)}{subsection.4.1}% 18
 \BOOKMARK [3][-]{subsubsection.4.1.3}{itemmetricas}{subsection.4.1}% 19

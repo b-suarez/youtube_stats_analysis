@@ -74,7 +74,7 @@ A partir del conjunto de datos para  {\itshape Youtube}  se plantean diferentes 
 
 \begin{itemize}
 
-\item  ?` qu\'e categorias son mas populares en cada mercado?
+\item  ?` qu\'e categor\'ias son mas populares en cada mercado?
 \item ?` cu\'anto tarda un video en hacerse Trending?
 \item ?`Cuales son las palabras m\'s utilizadas?
 \item ?`Cuales son las tags m\'as relevantes?
@@ -217,7 +217,7 @@ Para nuestro caso los valores extremos en visitas o cuentas de comentarios marca
 
 \section{An\'alisis de los datos}
 
-\subsection{Selecci\'on de los grupos de datos que se quieren analizar/comparar (planificaci\'on de los análisis a aplicar).}
+\subsection{Selecci\'on de los grupos de datos que se quieren analizar/comparar (planificaci\'on de los an\'alisis a aplicar).}
 
 \subsubsection{V\'ideos con defectos}
 
@@ -366,7 +366,7 @@ Se ve una discrepancia en los datos de {\itshape M\'exico}. Hacemos un gr\'afico
 \begin{figure}[h!]
 \centering
 \includegraphics[width=5cm]{grafica_transformada.JPG}
-\caption{G\'afico de densidades para {\itshape q{\textunderscore}overall{\textunderscore}sen{\textunderscore}eng}}
+\caption{Gr\'afico de densidades para {\itshape q{\textunderscore}overall{\textunderscore}sen{\textunderscore}eng}}
 \label{fig:quart_2}
 \end{figure}
 
@@ -386,7 +386,7 @@ Una vez normalizado los datos podemos aplicar el m\'etodo de correlaci\'on de {\
 \begin{figure}[h!]
 \centering
 \includegraphics[width=10cm]{Correlation.JPG}
-\caption{G\'afico de correlaciones para todos los atributos}
+\caption{Gr\'afico de correlaciones para todos los atributos}
 \label{fig:corrplot}
 \end{figure}
 
@@ -585,11 +585,15 @@ Para realizar este an\'alisis se han contado todas las palabras que al menos ocu
 Siguiendo el esquema de preguntas que nos plante\'abamos al principio de la pr\'actica:
 \begin{itemize}
 
-\item  ?` qu\'e categorias son mas populares en cada mercado? Aqu\'i adem\'as de decir que categorias son mas relevantes tambien puedes decir cuales son estad\'isticamnete similares
+\item  ?` qu\'e categorias son mas populares en cada mercado?
+\begin{itemize}
+\item Si tuvi\'esemos que generalizar, podemos decir para la mayor\'ia de pa\'ises Entretenimiento y M\'usica son las que mas destacan.
+\item Hemos descubierto que \'esto var\'ia mucho dependiendo del pa\'is, vemos como por ejemplo los videos musicales son de gran imporancia en el mercado Estadounidensse, pero no son casi relevantes en el Alem\'an. 
+\end{itemize}
 
 \item ?` cu\'anto tarda un video en hacerse Trending?
 \begin{itemize}
-\item depende fuertemente el pa\'is. De los pa\'ises investigados hasta 30 d\'ias es razonable para Gran Breta\~na. Para el resto, despu\'es de cinco d\'ias de su publicaci\'on la cantidad de v\'ideos que llegan a {\itshape a trending se reduce exponencialmente}
+\item Depende fuertemente el pa\'is. De los pa\'ises investigados hasta 30 d\'ias es razonable para Gran Breta\~na. Para el resto, despu\'es de cinco d\'ias de su publicaci\'on la cantidad de v\'ideos que llegan a {\itshape a trending se reduce exponencialmente}
 \end{itemize}
 \item ?`Cuales son las palabras m\'as utilizadas?
 \begin{itemize}
