@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.29)  4 JAN 2021 03:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.29)  5 JAN 2021 02:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -389,23 +389,29 @@ File: Stop_words.JPG Graphic file (type jpg)
 Package pdftex.def Info: Stop_words.JPG  used on input line 200.
 (pdftex.def)             Requested size: 284.52756pt x 229.5048pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 209.
+(Font)              <12> on input line 213.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 209.
+(Font)              <8> on input line 213.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 209.
+(Font)              <6> on input line 213.
  [9 <./Stop_words.JPG>]
 <tiempo.JPG, id=211, 588.69937pt x 325.215pt>
 File: tiempo.JPG Graphic file (type jpg)
 <use tiempo.JPG>
-Package pdftex.def Info: tiempo.JPG  used on input line 213.
+Package pdftex.def Info: tiempo.JPG  used on input line 217.
 (pdftex.def)             Requested size: 284.52756pt x 157.18321pt.
+
+Overfull \hbox (3.33316pt too wide) in paragraph at lines 228--229
+\T1/cmr/m/it/12 ments_disabled\T1/cmr/m/n/12 , \T1/cmr/m/it/12 ra-tings_disable
+d \T1/cmr/m/n/12 y \T1/cmr/m/it/12 vi-deo _error_or_removed\T1/cmr/m/n/12 , que
+ es-tán mar-
+ []
+
 <data_selection_2.JPG, id=213, 490.83376pt x 265.74281pt>
 File: data_selection_2.JPG Graphic file (type jpg)
 <use data_selection_2.JPG>
-Package pdftex.def Info: data_selection_2.JPG  used on input line 229.
+Package pdftex.def Info: data_selection_2.JPG  used on input line 235.
 (pdftex.def)             Requested size: 369.88582pt x 200.26762pt.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -413,7 +419,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <remove_category.png, id=223, 649.42625pt x 273.02pt>
 File: remove_category.png Graphic file (type png)
 <use remove_category.png>
-Package pdftex.def Info: remove_category.png  used on input line 247.
+Package pdftex.def Info: remove_category.png  used on input line 253.
 (pdftex.def)             Requested size: 369.88582pt x 155.5022pt.
 
 
@@ -421,21 +427,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 256.
+(hyperref)                removing `subscript' on input line 262.
 
 [11 <./data_selection_2.JPG>]
 <rvs_gen.png, id=230, 744.7825pt x 72.27pt>
 File: rvs_gen.png Graphic file (type png)
 <use rvs_gen.png>
-Package pdftex.def Info: rvs_gen.png  used on input line 267.
+Package pdftex.def Info: rvs_gen.png  used on input line 273.
 (pdftex.def)             Requested size: 369.88582pt x 35.89229pt.
 <rvs_plot.png, id=232, 923.45pt x 607.26875pt>
 File: rvs_plot.png Graphic file (type png)
 <use rvs_plot.png>
-Package pdftex.def Info: rvs_plot.png  used on input line 276.
+Package pdftex.def Info: rvs_plot.png  used on input line 282.
 (pdftex.def)             Requested size: 398.33858pt x 261.94516pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 276--277
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 282--283
  [][] 
  []
 
@@ -445,19 +451,16 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <rel_gen.png, id=234, 760.8425pt x 87.32625pt>
 File: rel_gen.png Graphic file (type png)
 <use rel_gen.png>
-Package pdftex.def Info: rel_gen.png  used on input line 287.
+Package pdftex.def Info: rel_gen.png  used on input line 293.
 (pdftex.def)             Requested size: 369.88582pt x 42.45444pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 [12 <./remove_category.png> <./rvs_gen.png>]
-<rel_relevance_plot.png, id=246, 935.495pt x 611.28375pt>
+<rel_relevance_plot.png, id=245, 935.495pt x 611.28375pt>
 File: rel_relevance_plot.png Graphic file (type png)
 <use rel_relevance_plot.png>
-Package pdftex.def Info: rel_relevance_plot.png  used on input line 299.
+Package pdftex.def Info: rel_relevance_plot.png  used on input line 305.
 (pdftex.def)             Requested size: 398.33858pt x 260.29117pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 299--300
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 305--306
  [][] 
  []
 
@@ -465,7 +468,7 @@ Overfull \hbox (8.33858pt too wide) in paragraph at lines 299--300
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [13 <./rvs_plot.png> <./rel_gen.png>]
-Overfull \hbox (18.03632pt too wide) in paragraph at lines 319--320
+Overfull \hbox (18.03632pt too wide) in paragraph at lines 324--325
 []\T1/cmr/m/it/12 Overall en-ga-ge-ment \T1/cmr/m/n/12 se cal-cu-la-rá uti-li-z
 an-do la fór-mu-la: \T1/cmr/m/it/12 (likes-dislikes)/views 
  []
@@ -473,12 +476,12 @@ an-do la fór-mu-la: \T1/cmr/m/it/12 (likes-dislikes)/views
 <engagement_1.png, id=256, 907.39pt x 861.2175pt>
 File: engagement_1.png Graphic file (type png)
 <use engagement_1.png>
-Package pdftex.def Info: engagement_1.png  used on input line 328.
+Package pdftex.def Info: engagement_1.png  used on input line 335.
 (pdftex.def)             Requested size: 369.88582pt x 351.06459pt.
 <engagement_2.png, id=257, 904.37875pt x 289.08pt>
 File: engagement_2.png Graphic file (type png)
 <use engagement_2.png>
-Package pdftex.def Info: engagement_2.png  used on input line 329.
+Package pdftex.def Info: engagement_2.png  used on input line 336.
 (pdftex.def)             Requested size: 369.88582pt x 118.22803pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -487,44 +490,44 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <dataframe_1.JPG, id=273, 631.60968pt x 194.22563pt>
 File: dataframe_1.JPG Graphic file (type jpg)
 <use dataframe_1.JPG>
-Package pdftex.def Info: dataframe_1.JPG  used on input line 347.
+Package pdftex.def Info: dataframe_1.JPG  used on input line 354.
 (pdftex.def)             Requested size: 341.43306pt x 104.99585pt.
 <dataframe_2.JPG, id=274, 483.30562pt x 176.15813pt>
 File: dataframe_2.JPG Graphic file (type jpg)
 <use dataframe_2.JPG>
-Package pdftex.def Info: dataframe_2.JPG  used on input line 348.
+Package pdftex.def Info: dataframe_2.JPG  used on input line 355.
 (pdftex.def)             Requested size: 341.43306pt x 124.45221pt.
 
 [16 <./dataframe_1.JPG> <./dataframe_2.JPG>]
 <dataframe_3.JPG, id=283, 413.29407pt x 140.77594pt>
 File: dataframe_3.JPG Graphic file (type jpg)
 <use dataframe_3.JPG>
-Package pdftex.def Info: dataframe_3.JPG  used on input line 359.
+Package pdftex.def Info: dataframe_3.JPG  used on input line 366.
 (pdftex.def)             Requested size: 341.43306pt x 116.30052pt.
 <grafica_transformada.JPG, id=284, 254.45062pt x 412.54124pt>
 File: grafica_transformada.JPG Graphic file (type jpg)
 <use grafica_transformada.JPG>
-Package pdftex.def Info: grafica_transformada.JPG  used on input line 368.
+Package pdftex.def Info: grafica_transformada.JPG  used on input line 375.
 (pdftex.def)             Requested size: 142.26378pt x 230.6627pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (3.18161pt too wide) in paragraph at lines 375--376
+Overfull \hbox (3.18161pt too wide) in paragraph at lines 382--383
 []\T1/cmr/m/n/12 En con-clu-sión aho-ra con-ta-mos con los da-tos trans-for-ma-
 dos vía \T1/cmr/m/it/12 Yeo-Jhonson
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 379.
+(hyperref)                removing `subscript' on input line 386.
 
 [17 <./dataframe_3.JPG>]
 <Correlation.JPG, id=293, 612.03656pt x 505.13719pt>
 File: Correlation.JPG Graphic file (type jpg)
 <use Correlation.JPG>
-Package pdftex.def Info: Correlation.JPG  used on input line 388.
+Package pdftex.def Info: Correlation.JPG  used on input line 395.
 (pdftex.def)             Requested size: 284.52756pt x 234.83241pt.
 
 
@@ -533,7 +536,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <col.JPG, id=295, 566.115pt x 138.5175pt>
 File: col.JPG Graphic file (type jpg)
 <use col.JPG>
-Package pdftex.def Info: col.JPG  used on input line 399.
+Package pdftex.def Info: col.JPG  used on input line 406.
 (pdftex.def)             Requested size: 284.52756pt x 69.62pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -542,15 +545,15 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <modelos_1.JPG, id=304, 471.26062pt x 324.46219pt>
 File: modelos_1.JPG Graphic file (type jpg)
 <use modelos_1.JPG>
-Package pdftex.def Info: modelos_1.JPG  used on input line 419.
+Package pdftex.def Info: modelos_1.JPG  used on input line 426.
 (pdftex.def)             Requested size: 284.52756pt x 195.89671pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (5.81644pt too wide) in paragraph at lines 424--425
-[]\T1/cmr/m/n/12 Los vo-la-res que ob-te-ne-mos pa-ra $\OML/cmm/m/it/12 R[]$\T1
+Overfull \hbox (5.49011pt too wide) in paragraph at lines 431--432
+[]\T1/cmr/m/n/12 Los va-lo-res que ob-te-ne-mos pa-ra $\OML/cmm/m/it/12 R[]$\T1
 /cmr/m/n/12 -ajustado son: $\OT1/cmr/m/n/12 0[]752$ \T1/cmr/m/n/12 pa-ra \T1/cm
 r/m/it/12 mo-del_raw_1\T1/cmr/m/n/12 ,
  []
@@ -559,7 +562,7 @@ r/m/it/12 mo-del_raw_1\T1/cmr/m/n/12 ,
 <summa.JPG, id=312, 433.62pt x 305.64188pt>
 File: summa.JPG Graphic file (type jpg)
 <use summa.JPG>
-Package pdftex.def Info: summa.JPG  used on input line 430.
+Package pdftex.def Info: summa.JPG  used on input line 437.
 (pdftex.def)             Requested size: 284.52756pt x 200.56299pt.
 
 
@@ -568,7 +571,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <anova_modelos.JPG, id=315, 505.13719pt x 124.96687pt>
 File: anova_modelos.JPG Graphic file (type jpg)
 <use anova_modelos.JPG>
-Package pdftex.def Info: anova_modelos.JPG  used on input line 440.
+Package pdftex.def Info: anova_modelos.JPG  used on input line 447.
 (pdftex.def)             Requested size: 284.52756pt x 70.39093pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -577,62 +580,62 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Berro.JPG, id=329, 179.16937pt x 249.93375pt>
 File: Berro.JPG Graphic file (type jpg)
 <use Berro.JPG>
-Package pdftex.def Info: Berro.JPG  used on input line 459.
+Package pdftex.def Info: Berro.JPG  used on input line 466.
 (pdftex.def)             Requested size: 170.71652pt x 238.1565pt.
  [22 <./Berro.JPG>]
 <plot_freq_code.png, id=337, 776.9025pt x 909.3975pt>
 File: plot_freq_code.png Graphic file (type png)
 <use plot_freq_code.png>
-Package pdftex.def Info: plot_freq_code.png  used on input line 473.
+Package pdftex.def Info: plot_freq_code.png  used on input line 480.
 (pdftex.def)             Requested size: 369.88582pt x 432.98128pt.
  [23 <./plot_freq_code.png>]
 <plot_freq_perc.png, id=345, 912.40875pt x 607.26875pt>
 File: plot_freq_perc.png Graphic file (type png)
 <use plot_freq_perc.png>
-Package pdftex.def Info: plot_freq_perc.png  used on input line 484.
+Package pdftex.def Info: plot_freq_perc.png  used on input line 491.
 (pdftex.def)             Requested size: 369.88582pt x 246.18341pt.
 <categories_1.png, id=346, 738.76pt x 355.3275pt>
 File: categories_1.png Graphic file (type png)
 <use categories_1.png>
-Package pdftex.def Info: categories_1.png  used on input line 496.
+Package pdftex.def Info: categories_1.png  used on input line 503.
 (pdftex.def)             Requested size: 369.88582pt x 177.90729pt.
 <categories_2.png, id=347, 736.7525pt x 697.60625pt>
 File: categories_2.png Graphic file (type png)
 <use categories_2.png>
-Package pdftex.def Info: categories_2.png  used on input line 502.
+Package pdftex.def Info: categories_2.png  used on input line 509.
 (pdftex.def)             Requested size: 369.88582pt x 350.22864pt.
 <plot_categories.png, id=348, 1128.215pt x 832.10875pt>
 File: plot_categories.png Graphic file (type png)
 <use plot_categories.png>
-Package pdftex.def Info: plot_categories.png  used on input line 511.
+Package pdftex.def Info: plot_categories.png  used on input line 518.
 (pdftex.def)             Requested size: 369.88582pt x 272.80646pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--512
+Underfull \hbox (badness 10000) in paragraph at lines 500--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--512
+Underfull \hbox (badness 10000) in paragraph at lines 500--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--512
+Underfull \hbox (badness 10000) in paragraph at lines 500--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--512
+Underfull \hbox (badness 10000) in paragraph at lines 500--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--512
+Underfull \hbox (badness 10000) in paragraph at lines 500--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--512
+Underfull \hbox (badness 10000) in paragraph at lines 500--519
 
  []
 
@@ -641,12 +644,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 493--512
 <cod_word.JPG, id=367, 567.62062pt x 333.49594pt>
 File: cod_word.JPG Graphic file (type jpg)
 <use cod_word.JPG>
-Package pdftex.def Info: cod_word.JPG  used on input line 525.
+Package pdftex.def Info: cod_word.JPG  used on input line 532.
 (pdftex.def)             Requested size: 369.88582pt x 217.32954pt.
 <wordcloud_tags.png, id=369, 923.45pt x 516.93124pt>
 File: wordcloud_tags.png Graphic file (type png)
 <use wordcloud_tags.png>
-Package pdftex.def Info: wordcloud_tags.png  used on input line 535.
+Package pdftex.def Info: wordcloud_tags.png  used on input line 542.
 (pdftex.def)             Requested size: 369.88582pt x 207.05278pt.
 
 
@@ -655,7 +658,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <wordcloud_title.png, id=371, 934.49126pt x 527.9725pt>
 File: wordcloud_title.png Graphic file (type png)
 <use wordcloud_title.png>
-Package pdftex.def Info: wordcloud_title.png  used on input line 549.
+Package pdftex.def Info: wordcloud_title.png  used on input line 555.
 (pdftex.def)             Requested size: 369.88582pt x 208.97786pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -663,7 +666,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <wordcould_desc.png, id=373, 915.42pt x 512.91624pt>
 File: wordcould_desc.png Graphic file (type png)
 <use wordcould_desc.png>
-Package pdftex.def Info: wordcould_desc.png  used on input line 561.
+Package pdftex.def Info: wordcould_desc.png  used on input line 567.
 (pdftex.def)             Requested size: 369.88582pt x 207.2447pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -672,52 +675,52 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <coc_comp.JPG, id=390, 219.06844pt x 87.32625pt>
 File: coc_comp.JPG Graphic file (type jpg)
 <use coc_comp.JPG>
-Package pdftex.def Info: coc_comp.JPG  used on input line 577.
+Package pdftex.def Info: coc_comp.JPG  used on input line 583.
 (pdftex.def)             Requested size: 142.26378pt x 56.71075pt.
 <dif_voc.JPG, id=391, 226.59656pt x 91.09032pt>
 File: dif_voc.JPG Graphic file (type jpg)
 <use dif_voc.JPG>
-Package pdftex.def Info: dif_voc.JPG  used on input line 578.
+Package pdftex.def Info: dif_voc.JPG  used on input line 584.
 (pdftex.def)             Requested size: 142.26378pt x 57.18843pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 583.
+(hyperref)                removing `subscript' on input line 589.
 
 [29 <./wordcould_desc.png> <./coc_comp.JPG> <./dif_voc.JPG>] [30]
 <Sent.JPG, id=404, 768.62157pt x 281.55188pt>
 File: Sent.JPG Graphic file (type jpg)
 <use Sent.JPG>
-Package pdftex.def Info: Sent.JPG  used on input line 624.
+Package pdftex.def Info: Sent.JPG  used on input line 630.
 (pdftex.def)             Requested size: 284.52756pt x 104.2241pt.
 <pol.JPG, id=405, 778.40813pt x 273.27094pt>
 File: pol.JPG Graphic file (type jpg)
 <use pol.JPG>
-Package pdftex.def Info: pol.JPG  used on input line 625.
+Package pdftex.def Info: pol.JPG  used on input line 631.
 (pdftex.def)             Requested size: 284.52756pt x 99.89108pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--644
+Underfull \hbox (badness 10000) in paragraph at lines 646--650
 
  []
 
 [31 <./Sent.JPG> <./pol.JPG>]
-Underfull \hbox (badness 1742) in paragraph at lines 654--656
+Underfull \hbox (badness 1742) in paragraph at lines 660--662
 []\T1/cmr/m/n/12 Jason Rad-ford and Ken-neth Jo-seph,\T1/cmr/m/it/12 Theory In,
  Theory Out: The
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 659.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 665.
 [32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 659.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 665.
  (./PRA2.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 659.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 659.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 665.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 665.
 Package rerunfilecheck Info: File `PRA2.out' has not changed.
 (rerunfilecheck)             Checksum: 5182AEAFBA26D1FCBC41581C5C4E900F;2705.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 659.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 665.
  ) 
 Here is how much of TeX's memory you used:
  6825 strings out of 480608
@@ -726,7 +729,7 @@ Here is how much of TeX's memory you used:
  22467 multiletter control sequences out of 15000+600000
  545402 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,35p,1174b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,11n,35p,944b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
@@ -744,7 +747,7 @@ e/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/
 /texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/t
 exmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2020/tex
 mf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on PRA2.pdf (33 pages, 2733932 bytes).
+Output written on PRA2.pdf (33 pages, 2734390 bytes).
 PDF statistics:
  496 PDF objects out of 1000 (max. 8388607)
  378 compressed objects within 4 object streams

@@ -47,14 +47,14 @@ Las caracter\'isticas representadas son las siguientes:
 
 \begin{itemize}
 
-\item \textbf{video{\textunderscore}id}: ID unico para cada v\'ideo.
-\item \textbf{trending{\textunderscore}date}: fecha en la que el v\'ideo entr\'o en Trend.
-\item \textbf{title}: T\'itulo del v\'ideo.
+\item \textbf{video{\textunderscore}id}: ID \'unico para cada video.
+\item \textbf{trending{\textunderscore}date}: fecha en la que el video entr\'o en Trend.
+\item \textbf{title}: T\'itulo del video.
 \item \textbf{channel{\textunderscore}title}: T\'itulo del canal al que se ha subido el v\'ideo.
-\item \textbf{category{\textunderscore}id}: ID de la categor\'ia del v\'ideo. (El nombre de cada categor\'ia viene dado en un fichero json externo)
-\item \textbf{publish{\textunderscore}time}: D\'ia y hora a la que se ha subido el v\'ideo.
-\item \textbf{tags}: SEO tags introducidas en el v\'ideo.
-\item \textbf{view}: N\'umero de visualizaciones que ha tenido el v\'ideo.
+\item \textbf{category{\textunderscore}id}: ID de la categor\'ia del video. (El nombre de cada categor\'ia viene dado en un fichero json externo)
+\item \textbf{publish{\textunderscore}time}: D\'ia y hora a la que se ha subido el video.
+\item \textbf{tags}: SEO tags introducidas en el video.
+\item \textbf{view}: N\'umero de visualizaciones que ha tenido el video.
 \item \textbf{likes}: N\'umero de likes.
 \item \textbf{dislikes}: N\'umero de dislikes.
 \item \textbf{comment{\textunderscore}count}: N\'umero de comentarios.
@@ -74,8 +74,8 @@ A partir del conjunto de datos para  {\itshape Youtube}  se plantean diferentes 
 
 \begin{itemize}
 
-\item  ?` qu\'e categor\'ias son mas populares en cada mercado?
-\item ?` cu\'anto tarda un video en hacerse Trending?
+\item  ?` Qu\'e categor\'ias son mas populares en cada mercado?
+\item ?` Cu\'anto tarda un video en hacerse Trending?
 \item ?`Cuales son las palabras m\'s utilizadas?
 \item ?`Cuales son las tags m\'as relevantes?
 \item ?`Cuales son las temas m\'as importantes?
@@ -85,11 +85,11 @@ A partir del conjunto de datos para  {\itshape Youtube}  se plantean diferentes 
 
 \end{itemize}
 
-Estos an\'alisis son de gran relevancia actualmente ya que como todos sabemos, la industria de creaci\'on de contenido online genera una gran cantidad de dinero y p\'ublico. Saber navegar \'este mercado puede ser muy interesante para cualquier marca o individuo que quiera generar beneficios o atraer p\'ublico a trav\'es de YouTube.
+Estos an\'alisis son de gran relevancia actualmente ya que como todos sabemos, la industria de creaci\'on de contenido online genera una gran cantidad de dinero y p\'ublico. Saber navegar \'este mercado puede ser muy interesante para cualquier marca o persona que quiera generar beneficios o atraer p\'ublico a trav\'es de YouTube.
 
 \section{Integraci\'on y selecci\'on de los datos de inter\'es a analizar}
 
-Tal y como se menciona en la secci\'on anterior este conjunto de datos extra\'idos de {\itshape Kaggle} cuenta con 10 datasets correspondientes a datos para la plataforma {\itshape YouTube} para diez pa\'ises diferentes. Los datasets de los diferentes pa\'ises cuentan con los mismos atributos. En general, los datsets tambi\'en presentan un fallo en la codificaci\'on de los caracteres que hace que las columnas con texto cuyos caracteres no est\'an dentro del alfabeto ingl\'es, no se cargen correctamente. Debido a esto se han seleccionado 4 datasets a tendiendo a una serie de criterios:
+Tal y como se menciona en la secci\'on anterior este conjunto de datos extra\'idos de {\itshape Kaggle} cuenta con 10 datasets correspondientes a datos para la plataforma {\itshape YouTube} para diez pa\'ises diferentes. Los datasets de los diferentes pa\'ises cuentan con los mismos atributos. En general, los datsets tambi\'en presentan un fallo en la codificaci\'on de los caracteres que hace que las columnas con texto cuyos caracteres no est\'an dentro del alfabeto ingl\'es, no se cargen correctamente. Debido a esto, se han seleccionado 4 datasets a tendiendo a una serie de criterios:
 
 \begin{itemize}
 
@@ -107,7 +107,7 @@ Los 4 datasets contienen datos para Alemania, Reino Unido, Mexico y EEUU.
 
 \subsection{Descarga de datos}
 
-Puesto que los datos ya contienen error de codificaci\'on de los atributos de texto y queremos evitar cualquier posible corrupci\'on de los datos al pasar por una m\'aquina intermedia (nuestros ordenadores), vamos a realizar una conexi\'on con Kaggle a trav\'es de su API utilizando nuestro fichero kaggle.json d\'onde guardaremos nuestras claves personales y descargamos los datos directamente a nuestro {\itshape drive} de google desde donde cargaremos los datos a nuestro notebook de {\itshape Google Colab}. 
+Puesto que los datos ya contienen error de codificaci\'on de los atributos de texto y queremos evitar cualquier posible corrupci\'on de los datos al pasar por una m\'aquina intermedia (nuestros ordenadores), vamos a realizar una conexi\'on con Kaggle a trav\'es de su API utilizando nuestro fichero kaggle.json d\'onde guardaremos nuestras claves personales y descargamos los datos directamente a nuestro {\itshape drive} de google desde d\'onde cargaremos los datos a nuestro notebook de {\itshape Google Colab}. 
 
 \begin{figure}[h!]
  \centering
@@ -129,7 +129,7 @@ Una vez nos hemos descargado los datasets y los tenemos en nuestro cloud, vamos 
 
 \subsection{?`Los datos contienen ceros o elementos vac\'ios? ?`C\'omo gestionar\'ias cada uno de estos casos?}
 
-Para nuestros casos no hay valores nulos, como se puede ver en la siguiente figura\ref{fig:nula} izquierda:
+Para nuestros casos no hay valores nulos, como se puede ver en la siguiente figura \ref{fig:nula} izquierda:
 
 \begin{figure}[h!]
 \centering
@@ -176,7 +176,7 @@ La parte de {\itshape language cleaning} es muy importante para nuestro proyecto
 
 \subsubsection{Limpieza general}
 
-En nuestro caso hemos definido diferentes funciones para corregir caracteres mal codificados, emoticonos, signos de puntuaci\'on que no necesitamos para el an\'alisis del lenguaje natura, as\'i como una funci\'on espec\'ifica para tratar carateres especiales del alfabeto alem\'an l. Hemos aplicado a las columnas: title, channel{\textunderscore}title,  tags y description. Las funciones se presentan el figura \ref{fig:corrtext}.
+En nuestro caso hemos definido diferentes funciones para corregir caracteres mal codificados, emoticonos, signos de puntuaci\'on que no necesitamos para el an\'alisis del lenguaje natura, as\'i como una funci\'on espec\'ifica para tratar caracteres especiales del alfabeto alem\'an l. Hemos aplicado a las columnas: title, channel{\textunderscore}title,  tags y description. Las funciones se presentan el figura \ref{fig:corrtext}.
 
 
 
@@ -189,7 +189,7 @@ En nuestro caso hemos definido diferentes funciones para corregir caracteres mal
 \label{fig:corrtext}
 \end{figure}
 
-A de m\'as de las correcciones presentadas han sido necesarias, varias rondas de correci\'on de texto donde se han eliminado errores que no se hab\'ian capturado inicialmente. Todo esto se puede ver dentro del c\'odigo en la secci\'on {\itshape Some NLP-More Cleaning}
+Adem\'as de las correcciones presentadas han sido necesarias, varias rondas de correci\'on de texto donde se han eliminado errores que no se hab\'ian capturado inicialmente. Todo esto se puede ver dentro del c\'odigo en la secci\'on {\itshape Some NLP-More Cleaning}
 
 \subsubsection{{\itshape Stop Words} para el {\itshape document-Term Matrix}}
 
@@ -202,11 +202,15 @@ Con el fin de realizar las {\itshape World Clouds}, hay que eliminar del {\itsha
 \label{fig:stop}
 \end{figure}
 
-A de m\'as de estas {\itshape Stop Words} ha sido necesario a\~nadir manualmente m\'as palabras debido a los errores de codificaci\'on de los textos
+Adem\'as de estas {\itshape Stop Words} ha sido necesario a\~nadir manualmente m\'as palabras debido a los errores de codificaci\'on de los textos
 
 \subsection{Identificaci\'on y tratamiento de valores extremos}
 
-Para nuestro caso los valores extremos en visitas o cuentas de comentarios marcan los v\'ideos m\'as populares, por lo que no parece acertado tratar estos datos como si de errores se tratasen, ya que estos valores extremos nos pueden indicar casos interesantes de estudio. por otra parte, al estudiar cuanto tiempo tarda un v\'ideo en convertirse  en tendencia, hemos visto que hay v\'ideos que pueden tardar hasta once a\~nos en llegar a tendencia. Estos caso, si son outliers  para nosotros. Nuestro caso de estudio es, como las cosas que ocurrieron ayer afecta a los que ser\'a tendencia ma\~nana y cuanto dura el impacto de estos hechos en el tiempo. Despu\'es de analizar las deltas de tiempo hemos considerado razonable eliminar cualquier video que tarde m\'as de 40 d\'ias en convertirse en tendencia por dos razones; Si algo tarda m\'as de 40 d\'ias en convertirse en tendencia no proviene de v\'ideos de historias recientes. Los v\'ideos que tardan m\'as de 40 d\'as en convertirse en tendencia suponen menos del $1.5\%$ de la informaci\'on total. En la figura \ref{fig:delta} se presenta la m\'etodo de eliminaci\'on de estos datos.
+Para nuestro caso los valores extremos en visitas o cuentas de comentarios marcan los v\'ideos m\'as populares, por lo que no parece acertado tratar estos datos como si de errores se tratasen, ya que estos valores extremos nos pueden indicar casos interesantes de estudio. 
+
+Por otra parte, al estudiar cuanto tiempo tarda un v\'ideo en convertirse  en tendencia, hemos visto que hay v\'ideos que pueden tardar hasta once a\~nos en llegar a tendencia. Estos casos, si son outliers  para nosotros. 
+
+Nuestro caso de estudio es, c\'omo las cosas que ocurrieron ayer afecta a los que ser\'a tendencia ma\~nana y cuanto dura el impacto de estos hechos en el tiempo. Despu\'es de analizar las deltas de tiempo hemos considerado razonable eliminar cualquier video que tarde m\'as de 40 d\'ias en convertirse en tendencia por dos razones; Si algo tarda m\'as de 40 d\'ias en convertirse en tendencia no proviene de v\'ideos de historias recientes. Los v\'ideos que tardan m\'as de 40 d\'ias en convertirse en tendencia suponen menos del $1.5\%$ de la informaci\'on total. En la figura \ref{fig:delta} se presenta la m\'etodo de eliminaci\'on de estos datos.
 
 \begin{figure}[h!]
 \centering
@@ -221,7 +225,9 @@ Para nuestro caso los valores extremos en visitas o cuentas de comentarios marca
 
 \subsubsection{V\'ideos con defectos}
 
-De entre todas las columnas destacan unas con valores l\'ogicos:  {\itshape commentsdisabled}, {\itshape ratingsdisabled} y {\itshape video error or removed}, que est\'an marcados indicando alg\'un tipo de carencia. Con el fin de homogeneizar los datos, es decir, hacer que todos nuestros datos provengan de v\'ideos con las mismas caracter\'isticas generales, vamos a eliminar las filas con valores {\itshape True} en cualquiera de estos atributos. Esto se puede ver en la figura \ref{fig:defect}. Tambi\'en se puede observar que en general se conserva m\'as del $96\%$ de la informaci\'on. 
+De entre todas las columnas destacan unas con valores l\'ogicos:  {\itshape comments{\textunderscore}disabled}, {\itshape ratings{\textunderscore}disabled} y {\itshape video {\textunderscore}error{\textunderscore}or{\textunderscore}removed}, que est\'an marcados indicando alg\'un tipo de carencia. 
+
+Con el fin de homogeneizar los datos, es decir, hacer que todos nuestros datos provengan de v\'ideos con las mismas caracter\'isticas generales, vamos a eliminar las filas con valores {\itshape True} en cualquiera de estos atributos. Esto se puede ver en la figura \ref{fig:defect}. Tambi\'en se puede observar que en general se conserva m\'as del $96\%$ de la informaci\'on. 
 
 
 \begin{figure}[h!]
@@ -234,11 +240,11 @@ De entre todas las columnas destacan unas con valores l\'ogicos:  {\itshape comm
 
 
 
-Debido a que estas columnas solo contienen valores {\itshape FALSE} despu\'es de elimar los {\itshape TRUE}, ya no es relevante conservar estas columnas por lo que se eliminan (esto se puede ver en c\'odigo en la secci\'on {\itshape data cleaning}).
+Debido a que estas columnas solo contienen valores {\itshape FALSE} despu\'es de eliminar los {\itshape TRUE}, ya no es relevante conservar estas columnas por lo que se eliminan (esto se puede ver en c\'odigo en la secci\'on {\itshape data cleaning}).
 
 \subsubsection{Eliminamos categor\'ia sin informaci\'on (category = 29)}
 
-No existe informaci\'on sobre que categir\'ia representa el id 29, por lo tanto eliminamos \'esta del dataset. Otra raz\'on para eliminarla es que al no saber que representa dicha categor\'ia, aun en el caso que pudi\'esemos extraer alguna informaci\'on para la categor\'ia 29, no podr\'iamos darle un sentido concreto
+No existe informaci\'on sobre que categor\'ia representa el id 29, por lo tanto eliminamos \'esta del dataset. Otra raz\'on para eliminarla es que al no saber que representa dicha categor\'ia, aun en el caso que pudi\'esemos extraer alguna informaci\'on para la categor\'ia 29, no podr\'iamos darle un sentido concreto
 
 En la figura \ref{fig:cat29}, se puede ver que despu\'es de eliminar los observaciones de esta categor\'ia, preservamos m\'as del 95 porciento de la informaci\'on.
 
@@ -255,12 +261,12 @@ En la figura \ref{fig:cat29}, se puede ver que despu\'es de eliminar los observa
 
 \subsubsection[item_metricas]{Generaci\'on de m\'etricas y an\'alisis de datos}
 
-Nuestros datos en bruto pueden carecer de sentido sin una referencia; ?`Son dos v\'ideos con el mismo n\'umero de visitas igual de relevantes? o Para dos videos con el mismo n\'umero de likes, ?`Podemos pensar que han despertado el mismo inter\'es?. otro ejemplo ser\'ia tenemos videos con un gran n\'umero de visitas pero pocos comentarios (lo que llamariamos un click bait), o un video con pocas visitas pero un gran n\'umero de comentarios.
+Nuestros datos en bruto pueden carecer de sentido sin una referencia; ?`Son dos v\'ideos con el mismo n\'umero de visitas igual de relevantes? o Para dos videos con el mismo n\'umero de likes, ?`Podemos pensar que han despertado el mismo inter\'es?. Otro ejemplo ser\'ia tenemos videos con un gran n\'umero de visitas pero pocos comentarios (lo que llamariamos un click bait), o un video con pocas visitas pero un gran n\'umero de comentarios.
 
 Para poder solventar inconveniente de que carecemos de referencias y poder analizar correctamente los v\'ideos, creamos una serie de m\'etricas relativas que nos ayudar\'an a realizar an\'alisis m\'as  de los v\'ideos.
 
 \textbf{Sentimiento relativo:} \\
-La m\'etrica {\itshape relative video sentiment} (rvs) se calcula utilizando la f\'ormula {\itshape (likes-dislikes)/sum(likes+dislikes)} y nos ayudar\'a a hacernos una idea de el sentimiento que genera un video sobre 1. Si el sentimiento que genera el v\'ideo es positivo el valor de rvs ser\'a positivos y si tiene m\'as {\itshape dislikes} el valor de rvs ser\'a negativo. Se puede ver expl\'icitamente el proceso seguido en la figura \ref{fig:rvsform}
+La m\'etrica {\itshape relative video sentiment} (rvs) se calcula utilizando la f\'ormula {\itshape (likes-dislikes)/sum(likes+dislikes)} y nos ayudar\'a a hacernos una idea de el sentimiento que genera un video sobre 1. Si el sentimiento que genera el v\'ideo es positivo, el valor de rvs ser\'a positivos y si tiene m\'as {\itshape dislikes} el valor de rvs ser\'a negativo. Se puede ver expl\'icitamente el proceso seguido en la figura \ref{fig:rvsform}
 
 \begin{figure}[h!]
 \centering
@@ -269,7 +275,7 @@ La m\'etrica {\itshape relative video sentiment} (rvs) se calcula utilizando la 
 \label{fig:rvsform}
 \end{figure}
 
-Haciendo un plot de las frecuencias obtenidas sobre esta m\'etrica, nos damos cuenta de que los videos que llegan a ser {\itshape trending}, tienden a tener m\'as {\itshape likes} que {\itshape likes}. De hecho la mayar\'ia de v\'ideos que llegan a {\itshape ttrending} tienen al menos un $75\%$ de {\itshape likes} frente a {\itshape dislikes}. Esto se puede ver en la figura \ref{fig:rvsgraf}.
+Haciendo un plot de las frecuencias obtenidas sobre esta m\'etrica, nos damos cuenta de que los videos que llegan a ser {\itshape trending}, tienden a tener m\'as {\itshape likes} que {\itshape likes}. De hecho la mayor\'ia de v\'ideos que llegan a {\itshape trending} tienen al menos un $75\%$ de {\itshape likes} frente a {\itshape dislikes}. Esto se puede ver en la figura \ref{fig:rvsgraf}.
 
 \begin{figure}[h!]
 \centering
@@ -281,7 +287,7 @@ Haciendo un plot de las frecuencias obtenidas sobre esta m\'etrica, nos damos cu
 \textbf{M\'etrica relevancia:}\\
 Sabemos que para los usuarios comentar un video conlleva m\'as esfuerzo que hacer click a {\itshape like} o {\itshape dislike}. Tambi\'en entendemos que un video tiene mayor cantidad de comentarios cuando los viewers tienen algo que decir sobre el tema o alg\'un comentario a provocado controversia.
 
-Para medir esto, hemos creado un atributo {\itshape rel{\textunderscore}elevance}, el cual se calcula con la formula {\itshape comment{\textunderscore}count/(likes+dislikes)}. Cuando su valor tiende a 1 asumimos que el video es relevante para los {\itshape viewers} y cuando es mayor que 1 quiere decir que es muy relevante. la geberaci\'on de la m\'etrica se puede ver la figura \ref{fig:relfor}.
+Para medir esto, hemos creado un atributo {\itshape rel{\textunderscore}relevance}, el cual se calcula con la f\'ormula {\itshape comment{\textunderscore}count/(likes+dislikes)}. Cuando su valor tiende a 1 asumimos que el video es relevante para los {\itshape viewers} y cuando es mayor que 1 quiere decir que es muy relevante. La generaci\'on de la m\'etrica se puede ver la figura \ref{fig:relfor}.
 \begin{figure}[h!]
 \centering
 \includegraphics[width=13cm]{rel_gen.png}
@@ -304,9 +310,9 @@ Esto nos da a entender que los v\'ideos que alcanzan {\itshape trending} no suel
 
 \textbf{M\'etrica sentiment engagement:}
 
-Por \'ultimo vamos a generar 3 atributos relacionados con el{\itshape sentiment engagement} de los v\'ideos, estos ser\'an el {\itshape positive engagement}, {\itshape negative engagement} y {\itshape overall engagement}.
+Por \'ultimo vamos a generar 3 atributos relacionados con el {\itshape sentiment engagement} de los v\'ideos, \'estos ser\'an el {\itshape positive engagement}, {\itshape negative engagement} y {\itshape overall engagement}.
 \newpage
-Estas m\'etricas se calculan como: \footnote{Los c\'alculos se han realizado de la misma forma que se ha mostrado en la dem\'as m\'etricas. Los detalles pueden verse en el notebook, apratdo m\'etricas.}
+Estas m\'etricas se calculan como: \footnote{Los c\'alculos se han realizado de la misma forma que se ha mostrado en la dem\'as m\'etricas. Los detalles pueden verse en el notebook, en el apartado de m\'etricas.}
 
 \begin{itemize}
 \item {\itshape Positive engagement} se calcular\'a utilizando la f\'ormula: {\itshape likes/views}
@@ -315,12 +321,13 @@ Estas m\'etricas se calculan como: \footnote{Los c\'alculos se han realizado de 
 \item {\itshape Negative engagement} se calcular\'a utilizando la f\'ormula: {\itshape dislikes/views}
 
 
-
 \item {\itshape Overall engagement} se calcular\'a utilizando la f\'ormula: {\itshape (likes-dislikes)/views}
 
 \end{itemize}
 
-Al representar sus frecuencias (figura \ref{fig:rengan}) podemos ver que los v\'ideos {\itshape trending} tienen un n\'umero de {\itshape likes} o {\itshape dislikes} muy peque\~no en comparaci\'on con las visualizaciones. De hecho la mayor\'ia  de ellos apenas tienen un $10\%$ de {\itshape likes} en comparaci\'on con las views. Y la mayor\'ia de las views son {\itshape likes}. Esto \'ultimo es m\'as evidente en la curva  para {\itshape Overall engagement} que para todos los casos, est\'a m\'as desplazada hacia el lado de los valores positivos.
+Al representar sus frecuencias (figura \ref{fig:rengan}) podemos ver que los v\'ideos {\itshape trending} tienen un n\'umero de {\itshape likes} o {\itshape dislikes} muy peque\~no en comparaci\'on con las visualizaciones. De hecho, la mayor\'ia  de ellos apenas tienen un $10\%$ de {\itshape likes} en comparaci\'on con las views. Y la mayor\'ia de las views son {\itshape likes}. 
+
+Esto \'ultimo es m\'as evidente en la curva  para {\itshape Overall engagement} que para todos los casos, est\'a m\'as desplazada hacia el lado de los valores positivos.
 
 
 \begin{figure}[h!]
@@ -335,9 +342,9 @@ Al representar sus frecuencias (figura \ref{fig:rengan}) podemos ver que los v\'
 
 Nuestro daset presenta dos dificultades a la hora de comprobar si los datos y las m\'etricas siguen una distribuci\'on normal. Por una parte el gran n\'umero de datos hace inviable la aplicaci\'on del test de normalidad de {\itshape  Shapiro Wilk}, por otra parte, al existir muchos valores repetidos para un atributo el test de {\itshape Anderson Darling} no es fiable ya que siempre devolver\'a como resultado el rechazo de la hip\'otesis nula. Por este motivo nos centramos en los valores de {\itshape Kurosis} y {\itshape Skewness}. Para estos test, t\'ipicamnete se considera que una distribuci\'on es normal cuando el valor de {\itshape Kurtosis} est\'a entre $-2$ y $+2$ y para {\itshape skewness} los valores deben caer dentro del intervalo entre $-0.8$ y $+0.8$.
 
-Hemos creado una funci\'on {\itshape normal check} que nos devuelve 1 cuando los datos de un atributo siguen una distribuci\'on normal (en las condiciones especificadas arriba) y 0 cuando no la sigue. La hemos aplicado sobre todas las columnas de todas los datasets y los datos los hemos visualizado como un dataframe que se copia abajo (los detalles de la funci\'on se encuentran el notebook).
+Hemos creado una funci\'on {\itshape normal check} que nos devuelve 1 cuando los datos de un atributo siguen una distribuci\'on normal (en las condiciones especificadas arriba) y 0 cuando no la sigue. La hemos aplicado sobre todas las columnas de todos los datasets y los datos los hemos visualizado como un dataframe que se copia abajo (los detalles de la funci\'on se encuentran el notebook).
 
-Podemos comprobar que tanto los valores de los datos en crudo, como las m\'etricas que hemos implementado no siguen una distribuci\'on normal (figura \ref{fig:norm_1}). Con el fin de solucionar este problema y conseguir una distribuci\'on homogenea de la varianza, hemos optado por utilizar en primera instancia una transformaci\'on de {\itshape Yeo Jhonson}, puesto que nos permite aplicar el mismo c\'odigo sobre todos los atributos (una transformaci\'on de {\itshape Yeo Jhonson} a diferencia de {\itshape Boxcox} nos permite trabajar con valores negativos y ceros).
+Podemos comprobar que tanto los valores de los datos en crudo, como las m\'etricas que hemos implementado no siguen una distribuci\'on normal (figura \ref{fig:norm_1}). Con el fin de solucionar este problema y conseguir una distribuci\'on homog\'enea de la varianza, hemos optado por utilizar en primera instancia una transformaci\'on de {\itshape Yeo Jhonson}, puesto que nos permite aplicar el mismo c\'odigo sobre todos los atributos (una transformaci\'on de {\itshape Yeo Jhonson} a diferencia de {\itshape Boxcox} nos permite trabajar con valores negativos y ceros).
 
 
 
@@ -381,7 +388,7 @@ Como nota final tambi\'en se ha investigado la normalidad de las deltas de tiemp
 
 \subsubsection{M\'etodo 1: Correlaci\'on}
 
-Una vez normalizado los datos podemos aplicar el m\'etodo de correlaci\'on de {\itshape Pearson}. En la figura \ref{fig:corrplot} es interesante ver que los atributos transformados presentan una alta correlaci\'on. Si ahora nos fijamos en los atributos sin transformar esta correlaci\'on aunque alta no es tan marcada como en los atributos transformados.  La alta correlaci\'on tambi\'en apunta al hecho que es factible esperar encontrar una relazi\'on lineal entre atributos transformados.
+Una vez normalizado los datos podemos aplicar el m\'etodo de correlaci\'on de {\itshape Pearson}. En la figura \ref{fig:corrplot} es interesante ver que los atributos transformados presentan una alta correlaci\'on. Si ahora nos fijamos en los atributos sin transformar esta correlaci\'on, aunque alta, no es tan marcada como en los atributos transformados.  La alta correlaci\'on tambi\'en apunta al hecho que es factible esperar encontrar una relaci\'on lineal entre atributos transformados.
  
 \begin{figure}[h!]
 \centering
@@ -421,7 +428,7 @@ A continuaci\'on se deja el $85\%$ de los datos para entrenar los modelos, y el 
 \label{fig:model1}
 \end{figure}
 
-Los volares que obtenemos para $R^{2}$-ajustado son: $0.752$ para {\itshape model{\textunderscore}raw{\textunderscore}1}, 0.001 para  {\itshape model{\textunderscore}metric{\textunderscore}1} y 0.953 para  {\itshape model{\textunderscore}trans{\textunderscore}1}.
+Los valores que obtenemos para $R^{2}$-ajustado son: $0.752$ para {\itshape model{\textunderscore}raw{\textunderscore}1}, 0.001 para  {\itshape model{\textunderscore}metric{\textunderscore}1} y 0.953 para  {\itshape model{\textunderscore}trans{\textunderscore}1}.
 
 A tenor de estos resultados se escoge como mejor modelo: {\itshape model{\textunderscore}trans{\textunderscore}1}. Este modelo usa los atributos que han sufrido una transformaci\'on para que los atributos tengan una distribuci\'on normal. Los atributos tambi\'en presentaban una alta correlaci\'on. Con el fin de otorgar sentido al {\itshape intercept}, tambi\'en se hace el modelo con los datos centrados y escalados. De esta forma el {\itshape intercept} representa el valor de {\itshape fviews} cuando todos los atributos tienen un valor igual a su media. En cualquier caso, el valor de $R^{2}$ ajustado se mantiene constante tanto para el modelo que usa los datos escalados como el que no. Por este motivo mostramos el {\itshape summary} del modelo con los datos escalados y centrados (figura \ref{fig:summ}) .
 
@@ -444,11 +451,11 @@ En la figura  \ref{fig:summ}, se puede ver que el atributo {\itshape fdislikes} 
 
 En la figura \ref{fig:anov} se puede ver que el valor de p es lo suficientemente alto como para no poder rechazar la hip\'otesis nula. Por lo no podemos decir que los dos modelos sean diferentes. En este caso elegimos el modelo reducido ya que tienen menos variables y nos ofrecer\'a los mismo resultados.
 
-Por \'ultimo hemos querido comprobar la capacidad predictiva de nuestros modelos, y se ha calculado el valor RMSE (desviaci\'on de m\'inimos cuadrdos), tanto para el modelo de datos en crudo como para el modelo reducido (que usa los atributos transformados), sobre sus respectivos {\itshape test sets}. Adem\'as con el fin de poder establecer una comparaci\'on entre ambos valores el valor de RMSE se ha dividido por los respectivos valores m\'aximos de {\itshape views} y {\itshape fviews} de los {\itshape test sets}.
+Por \'ultimo hemos querido comprobar la capacidad predictiva de nuestros modelos, y se ha calculado el valor RMSE (desviaci\'on de m\'inimos cuadrados), tanto para el modelo de datos en crudo como para el modelo reducido (que usa los atributos transformados), sobre sus respectivos {\itshape test sets}. Adem\'as con el fin de poder establecer una comparaci\'on entre ambos valores, el valor de RMSE se ha dividido por los valores m\'aximos de {\itshape views} y {\itshape fviews} de los {\itshape test sets}.
 
 Para el caso del modelo con datos en crudo hemos encontrado un valore de RMSE de $925483$ y al dividirlo por su m\'aximo $19972$ (la desviaci\'on es casi 20000 mayor que la propia medida). 
 
-Para el modelo reducido tenemos un RMSE de $0.1830192$ y al dividirlo por el valor m\'aximo $0.0553140$. El hecho de que el valor relativo sea menor que uno ya es indicativo que la desciaci\'on es inferior a la medida.  
+Para el modelo reducido tenemos un RMSE de $0.1830192$ y al dividirlo por el valor m\'aximo $0.0553140$. El hecho de que el valor relativo sea menor que uno ya es indicativo que la desviaci\'on es inferior a la medida.  
 
 \subsubsection{M\'etodo 3: Pruebas de contraste de hip\'otesis}
 
@@ -538,10 +545,9 @@ Las \textbf{tags} se pueden ver en la figura \ref{fig:colud_2}.
 \label{fig:colud_2}
 \end{figure}
 
-Destacar en el Mexicano, que podemos ver la TV Azteca y exatlon, que es un programa de gran \'exito en el pais (de TV Azteca). En usa parece que {\itshape makeup tutorial} es importante. On Gran Breta\~na {\itshape Star Wars} o {\itshape Black panther} (en este momento cabe destacar que estos datos son del 2017)
+Destacar en el Mexicano, que podemos ver la TV Azteca y exatlon, que es un programa de gran \'exito en el pais (de TV Azteca). En EEUU parece que {\itshape makeup tutorial} es importante. En Gran Breta\~na {\itshape Star Wars} o {\itshape Black panther} (en este momento cabe destacar que estos datos son del 2017)
 
 Los \textbf{t\'itulos} de los v\'ideos los podemos ver la figura \ref{fig:colud_3}.  
-
 
 
 \begin{figure}[h!]
@@ -585,13 +591,13 @@ Para realizar este an\'alisis se han contado todas las palabras que al menos ocu
 Siguiendo el esquema de preguntas que nos plante\'abamos al principio de la pr\'actica:
 \begin{itemize}
 
-\item  ?` qu\'e categorias son mas populares en cada mercado?
+\item  ?` Qu\'e categorias son mas populares en cada mercado?
 \begin{itemize}
 \item Si tuvi\'esemos que generalizar, podemos decir para la mayor\'ia de pa\'ises Entretenimiento y M\'usica son las que mas destacan.
 \item Hemos descubierto que \'esto var\'ia mucho dependiendo del pa\'is, vemos como por ejemplo los videos musicales son de gran imporancia en el mercado Estadounidensse, pero no son casi relevantes en el Alem\'an. 
 \end{itemize}
 
-\item ?` cu\'anto tarda un video en hacerse Trending?
+\item ?` Cu\'anto tarda un video en hacerse Trending?
 \begin{itemize}
 \item Depende fuertemente el pa\'is. De los pa\'ises investigados hasta 30 d\'ias es razonable para Gran Breta\~na. Para el resto, despu\'es de cinco d\'ias de su publicaci\'on la cantidad de v\'ideos que llegan a {\itshape a trending se reduce exponencialmente}
 \end{itemize}
