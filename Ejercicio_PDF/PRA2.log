@@ -1,218 +1,237 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.12.29)  5 JAN 2021 02:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.10) (preloaded format=pdflatex 2020.11.2)  5 JAN 2021 11:33
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**PRA2.tex
-(./PRA2.tex
-LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-03-06>
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+**./PRA2.tex
+(PRA2.tex
+LaTeX2e <2020-10-01> patch level 1
+L3 programming layer <2020-10-05> xparse <2020-03-03>
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count167
-\c@section=\count168
-\c@subsection=\count169
-\c@subsubsection=\count170
-\c@paragraph=\count171
-\c@subparagraph=\count172
-\c@figure=\count173
-\c@table=\count174
+\c@part=\count175
+\c@section=\count176
+\c@subsection=\count177
+\c@subsubsection=\count178
+\c@paragraph=\count179
+\c@subparagraph=\count180
+\c@figure=\count181
+\c@table=\count182
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
-\bibindent=\dimen134
+\bibindent=\dimen138
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/08/11 v1.3c Input encoding file
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/latin1.def
-File: latin1.def 2018/08/11 v1.3c Input encoding file
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\latin1.def
+File: latin1.def 2020/08/01 v1.3d Input encoding file
 ))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2020/03/22 3.42 The Babel package
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2020/10/06 3.50 The Babel package
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2020/03/22 3.42 Babel switching mechanism
-)
-(/usr/local/texlive/2020/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2020/10/06 3.50 Babel common definitions
+\babel@savecnt=\count183
+\U@D=\dimen139
+\l@babelnohyphens=\language79
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2020/03/22 3.42 Babel common definitions
-\babel@savecnt=\count175
-\U@D=\dimen135
-
-(/usr/local/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count176
 )
+\bbl@dirlevel=\count184
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish
+.ldf
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 \es@quottoks=\toks17
-\es@quotdepth=\count177
+\es@quotdepth=\count185
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
 ))
-(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
-)
-(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcm
+ds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr
+.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks18
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys
+.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefi
+nekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape
+.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmac
+ro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/auxhook\auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
+ty
 Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
 )
-\@linkdim=\dimen136
-\Hy@linkcounter=\count178
-\Hy@pagecounter=\count179
+\@linkdim=\dimen140
+\Hy@linkcounter=\count186
+\Hy@pagecounter=\count187
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.s
+ty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count180
-Package hyperref Info: Hyper figures OFF on input line 4547.
-Package hyperref Info: Link nesting OFF on input line 4552.
-Package hyperref Info: Hyper index ON on input line 4555.
-Package hyperref Info: Plain pages OFF on input line 4562.
-Package hyperref Info: Backreferencing OFF on input line 4567.
+\Hy@SavedSpaceFactor=\count188
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4800.
-\c@Hy@tempcnt=\count181
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count189
+ (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5159.
-\XeTeXLinkMargin=\dimen137
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen141
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintca
+lc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count182
-\Field@Width=\dimen138
-\Fld@charsize=\dimen139
-Package hyperref Info: Hyper figures OFF on input line 6430.
-Package hyperref Info: Link nesting OFF on input line 6435.
-Package hyperref Info: Hyper index ON on input line 6438.
-Package hyperref Info: backreferencing OFF on input line 6445.
-Package hyperref Info: Link coloring OFF on input line 6450.
-Package hyperref Info: Link coloring with OCG OFF on input line 6455.
-Package hyperref Info: PDF/A mode OFF on input line 6460.
-LaTeX Info: Redefining \ref on input line 6500.
-LaTeX Info: Redefining \pageref on input line 6504.
+\Fld@menulength=\count190
+\Field@Width=\dimen142
+\Fld@charsize=\dimen143
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
-Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
 )
-\Hy@abspage=\count183
-\c@Item=\count184
-\c@Hfootnote=\count185
+\Hy@abspage=\count191
+\c@Item=\count192
+\c@Hfootnote=\count193
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
-Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/base\atveryend-ltx.st
+y
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
 )
-\Fld@listcount=\count186
-\c@bookmark@seq@number=\count187
+\Fld@listcount=\count194
+\c@bookmark@seq@number=\count195
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
+ilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqu
+ecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip49
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics
+.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.d
+ef
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen140
-\Gin@req@width=\dimen141
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
 )
-(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count188
-\l__pdf_internal_box=\box45
-)
-(./PRA2.aux
-LaTeX Info: Redefining \. on input line 24.
-LaTeX Info: Redefining \% on input line 24.
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-p
+dftex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count196
+\l__pdf_internal_box=\box47
+) (PRA2.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
 )
 \openout1 = `PRA2.aux'.
 
@@ -234,59 +253,58 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
-\AtBeginShipoutBox=\box46
 Package hyperref Info: Link coloring OFF on input line 19.
- (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
-(/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
-ty
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gett
+itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count189
+\c@section@level=\count197
 )
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
- (./PRA2.out) (./PRA2.out)
+ (PRA2.out) (PRA2.out)
 \@outlinefile=\write3
 \openout3 = `PRA2.out'.
 
 
-(/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
+mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count190
-\scratchdimen=\dimen142
-\scratchbox=\box47
-\nofMPsegments=\count191
-\nofMParguments=\count192
+\scratchcounter=\count198
+\scratchdimen=\dimen146
+\scratchbox=\box48
+\nofMPsegments=\count199
+\nofMParguments=\count266
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count193
-\MPscratchDim=\dimen143
-\MPnumerator=\count194
-\makeMPintoPDFobject=\count195
+\MPscratchCnt=\count267
+\MPscratchDim=\dimen147
+\MPnumerator=\count268
+\makeMPintoPDFobject=\count269
 \everyMPtoPDFconversion=\toks20
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
+-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-
-(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+)
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <14.4> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 22.
+ [1
 
-[1
-
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{C:/Users/Usuario/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
@@ -318,439 +336,408 @@ File: kaggle_upload.png Graphic file (type png)
 <use kaggle_upload.png>
 Package pdftex.def Info: kaggle_upload.png  used on input line 114.
 (pdftex.def)             Requested size: 369.88582pt x 216.32718pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<data_load.png, id=156, 616.3025pt x 695.59875pt>
+ [4]
+<data_load.png, id=161, 616.3025pt x 695.59875pt>
 File: data_load.png Graphic file (type png)
 <use data_load.png>
-Package pdftex.def Info: data_load.png  used on input line 123.
+Package pdftex.def Info: data_load.png  used on input line 125.
 (pdftex.def)             Requested size: 199.16928pt x 224.79324pt.
-[4]
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 128.
+(hyperref)                removing `subscript' on input line 130.
 
 
-Overfull \hbox (0.38254pt too wide) in paragraph at lines 130--130
+Overfull \hbox (0.38254pt too wide) in paragraph at lines 132--132
 []\T1/cmr/bx/n/14.4 ?`Los da-tos con-tie-nen ce-ros o ele-men-tos va-cíos? ?`Có
 -
  []
 
-<vacio_datos.JPG, id=162, 370.38374pt x 354.57469pt>
+<vacio_datos.JPG, id=163, 370.38374pt x 354.57469pt>
 File: vacio_datos.JPG Graphic file (type jpg)
 <use vacio_datos.JPG>
-Package pdftex.def Info: vacio_datos.JPG  used on input line 136.
+Package pdftex.def Info: vacio_datos.JPG  used on input line 138.
 (pdftex.def)             Requested size: 170.71652pt x 163.43095pt.
-<Na_values.JPG, id=163, 237.88875pt x 305.64188pt>
+<Na_values.JPG, id=164, 237.88875pt x 305.64188pt>
 File: Na_values.JPG Graphic file (type jpg)
 <use Na_values.JPG>
-Package pdftex.def Info: Na_values.JPG  used on input line 137.
+Package pdftex.def Info: Na_values.JPG  used on input line 139.
 (pdftex.def)             Requested size: 170.71652pt x 219.34842pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [5 <./kaggle_upload.png>] [6 <./data_load.png> <./vacio_datos.JPG> <./Na_values
 .JPG>]
-<correc_trending.png, id=179, 619.31375pt x 167.62625pt>
+<correc_trending.png, id=180, 619.31375pt x 167.62625pt>
 File: correc_trending.png Graphic file (type png)
 <use correc_trending.png>
-Package pdftex.def Info: correc_trending.png  used on input line 157.
+Package pdftex.def Info: correc_trending.png  used on input line 159.
 (pdftex.def)             Requested size: 369.88582pt x 100.11867pt.
-<correc_publish.png, id=180, 775.89874pt x 223.83624pt>
+<correc_publish.png, id=181, 775.89874pt x 223.83624pt>
 File: correc_publish.png Graphic file (type png)
 <use correc_publish.png>
-Package pdftex.def Info: correc_publish.png  used on input line 167.
+Package pdftex.def Info: correc_publish.png  used on input line 169.
 (pdftex.def)             Requested size: 369.88582pt x 106.70926pt.
  [7 <./correc_trending.png> <./correc_publish.png>]
 <latin_characters.png, id=191, 843.15pt x 380.42125pt>
 File: latin_characters.png Graphic file (type png)
 <use latin_characters.png>
-Package pdftex.def Info: latin_characters.png  used on input line 185.
+Package pdftex.def Info: latin_characters.png  used on input line 187.
 (pdftex.def)             Requested size: 284.52756pt x 128.37791pt.
 <german_characters.png, id=192, 877.2775pt x 434.62375pt>
 File: german_characters.png Graphic file (type png)
 <use german_characters.png>
-Package pdftex.def Info: german_characters.png  used on input line 186.
+Package pdftex.def Info: german_characters.png  used on input line 188.
 (pdftex.def)             Requested size: 284.52756pt x 140.95924pt.
 <misspellings.png, id=193, 848.16875pt x 269.005pt>
 File: misspellings.png Graphic file (type png)
 <use misspellings.png>
-Package pdftex.def Info: misspellings.png  used on input line 187.
+Package pdftex.def Info: misspellings.png  used on input line 189.
 (pdftex.def)             Requested size: 284.52756pt x 90.2414pt.
  [8 <./latin_characters.png> <./german_characters.png> <./misspellings.png>]
-<Stop_words.JPG, id=203, 615.0478pt x 496.10344pt>
+<Stop_words.JPG, id=204, 615.0478pt x 496.10344pt>
 File: Stop_words.JPG Graphic file (type jpg)
 <use Stop_words.JPG>
-Package pdftex.def Info: Stop_words.JPG  used on input line 200.
+Package pdftex.def Info: Stop_words.JPG  used on input line 202.
 (pdftex.def)             Requested size: 284.52756pt x 229.5048pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 213.
+(Font)              <12> on input line 215.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 213.
+(Font)              <8> on input line 215.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 213.
+(Font)              <6> on input line 215.
  [9 <./Stop_words.JPG>]
-<tiempo.JPG, id=211, 588.69937pt x 325.215pt>
+<tiempo.JPG, id=212, 588.69937pt x 325.215pt>
 File: tiempo.JPG Graphic file (type jpg)
 <use tiempo.JPG>
-Package pdftex.def Info: tiempo.JPG  used on input line 217.
+Package pdftex.def Info: tiempo.JPG  used on input line 219.
 (pdftex.def)             Requested size: 284.52756pt x 157.18321pt.
-
-Overfull \hbox (3.33316pt too wide) in paragraph at lines 228--229
-\T1/cmr/m/it/12 ments_disabled\T1/cmr/m/n/12 , \T1/cmr/m/it/12 ra-tings_disable
-d \T1/cmr/m/n/12 y \T1/cmr/m/it/12 vi-deo _error_or_removed\T1/cmr/m/n/12 , que
- es-tán mar-
- []
-
-<data_selection_2.JPG, id=213, 490.83376pt x 265.74281pt>
+<data_selection_2.JPG, id=214, 490.83376pt x 265.74281pt>
 File: data_selection_2.JPG Graphic file (type jpg)
 <use data_selection_2.JPG>
-Package pdftex.def Info: data_selection_2.JPG  used on input line 235.
+Package pdftex.def Info: data_selection_2.JPG  used on input line 237.
 (pdftex.def)             Requested size: 369.88582pt x 200.26762pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [10 <./tiempo.JPG>]
 <remove_category.png, id=223, 649.42625pt x 273.02pt>
 File: remove_category.png Graphic file (type png)
 <use remove_category.png>
-Package pdftex.def Info: remove_category.png  used on input line 253.
+Package pdftex.def Info: remove_category.png  used on input line 255.
 (pdftex.def)             Requested size: 369.88582pt x 155.5022pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 262.
-
 [11 <./data_selection_2.JPG>]
-<rvs_gen.png, id=230, 744.7825pt x 72.27pt>
+<rvs_gen.png, id=231, 744.7825pt x 72.27pt>
 File: rvs_gen.png Graphic file (type png)
 <use rvs_gen.png>
-Package pdftex.def Info: rvs_gen.png  used on input line 273.
+Package pdftex.def Info: rvs_gen.png  used on input line 275.
 (pdftex.def)             Requested size: 369.88582pt x 35.89229pt.
-<rvs_plot.png, id=232, 923.45pt x 607.26875pt>
+<rvs_plot.png, id=233, 923.45pt x 607.26875pt>
 File: rvs_plot.png Graphic file (type png)
 <use rvs_plot.png>
-Package pdftex.def Info: rvs_plot.png  used on input line 282.
+Package pdftex.def Info: rvs_plot.png  used on input line 284.
 (pdftex.def)             Requested size: 398.33858pt x 261.94516pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 282--283
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 284--285
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<rel_gen.png, id=234, 760.8425pt x 87.32625pt>
+<rel_gen.png, id=235, 760.8425pt x 87.32625pt>
 File: rel_gen.png Graphic file (type png)
 <use rel_gen.png>
-Package pdftex.def Info: rel_gen.png  used on input line 293.
+Package pdftex.def Info: rel_gen.png  used on input line 295.
 (pdftex.def)             Requested size: 369.88582pt x 42.45444pt.
 [12 <./remove_category.png> <./rvs_gen.png>]
-<rel_relevance_plot.png, id=245, 935.495pt x 611.28375pt>
+<rel_relevance_plot.png, id=246, 935.495pt x 611.28375pt>
 File: rel_relevance_plot.png Graphic file (type png)
 <use rel_relevance_plot.png>
-Package pdftex.def Info: rel_relevance_plot.png  used on input line 305.
+Package pdftex.def Info: rel_relevance_plot.png  used on input line 307.
 (pdftex.def)             Requested size: 398.33858pt x 260.29117pt.
 
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 305--306
+Overfull \hbox (8.33858pt too wide) in paragraph at lines 307--308
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13 <./rvs_plot.png> <./rel_gen.png>]
-Overfull \hbox (18.03632pt too wide) in paragraph at lines 324--325
+[13 <./rvs_plot.png> <./rel_gen.png>] [14 <./rel_relevance_plot.png>]
+Overfull \hbox (18.03632pt too wide) in paragraph at lines 326--327
 []\T1/cmr/m/it/12 Overall en-ga-ge-ment \T1/cmr/m/n/12 se cal-cu-la-rá uti-li-z
 an-do la fór-mu-la: \T1/cmr/m/it/12 (likes-dislikes)/views 
  []
 
-<engagement_1.png, id=256, 907.39pt x 861.2175pt>
+<engagement_1.png, id=262, 907.39pt x 861.2175pt>
 File: engagement_1.png Graphic file (type png)
 <use engagement_1.png>
-Package pdftex.def Info: engagement_1.png  used on input line 335.
+Package pdftex.def Info: engagement_1.png  used on input line 337.
 (pdftex.def)             Requested size: 369.88582pt x 351.06459pt.
-<engagement_2.png, id=257, 904.37875pt x 289.08pt>
+<engagement_2.png, id=263, 904.37875pt x 289.08pt>
 File: engagement_2.png Graphic file (type png)
 <use engagement_2.png>
-Package pdftex.def Info: engagement_2.png  used on input line 336.
+Package pdftex.def Info: engagement_2.png  used on input line 338.
 (pdftex.def)             Requested size: 369.88582pt x 118.22803pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14 <./rel_relevance_plot.png>] [15 <./engagement_1.png> <./engagement_2.png>]
-<dataframe_1.JPG, id=273, 631.60968pt x 194.22563pt>
+<dataframe_1.JPG, id=265, 631.60968pt x 194.22563pt>
 File: dataframe_1.JPG Graphic file (type jpg)
 <use dataframe_1.JPG>
-Package pdftex.def Info: dataframe_1.JPG  used on input line 354.
+Package pdftex.def Info: dataframe_1.JPG  used on input line 356.
 (pdftex.def)             Requested size: 341.43306pt x 104.99585pt.
-<dataframe_2.JPG, id=274, 483.30562pt x 176.15813pt>
+<dataframe_2.JPG, id=266, 483.30562pt x 176.15813pt>
 File: dataframe_2.JPG Graphic file (type jpg)
 <use dataframe_2.JPG>
-Package pdftex.def Info: dataframe_2.JPG  used on input line 355.
+Package pdftex.def Info: dataframe_2.JPG  used on input line 357.
 (pdftex.def)             Requested size: 341.43306pt x 124.45221pt.
-
-[16 <./dataframe_1.JPG> <./dataframe_2.JPG>]
-<dataframe_3.JPG, id=283, 413.29407pt x 140.77594pt>
+[15] [16 <./engagement_1.png> <./engagement_2.png>]
+<dataframe_3.JPG, id=284, 413.29407pt x 140.77594pt>
 File: dataframe_3.JPG Graphic file (type jpg)
 <use dataframe_3.JPG>
-Package pdftex.def Info: dataframe_3.JPG  used on input line 366.
+Package pdftex.def Info: dataframe_3.JPG  used on input line 368.
 (pdftex.def)             Requested size: 341.43306pt x 116.30052pt.
-<grafica_transformada.JPG, id=284, 254.45062pt x 412.54124pt>
+<grafica_transformada.JPG, id=285, 254.45062pt x 412.54124pt>
 File: grafica_transformada.JPG Graphic file (type jpg)
 <use grafica_transformada.JPG>
-Package pdftex.def Info: grafica_transformada.JPG  used on input line 375.
+Package pdftex.def Info: grafica_transformada.JPG  used on input line 377.
 (pdftex.def)             Requested size: 142.26378pt x 230.6627pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (3.18161pt too wide) in paragraph at lines 382--383
+ [17 <./dataframe_1.JPG> <./dataframe_2.JPG> <./dataframe_3.JPG>]
+Overfull \hbox (3.18161pt too wide) in paragraph at lines 384--385
 []\T1/cmr/m/n/12 En con-clu-sión aho-ra con-ta-mos con los da-tos trans-for-ma-
 dos vía \T1/cmr/m/it/12 Yeo-Jhonson
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 386.
-
-[17 <./dataframe_3.JPG>]
-<Correlation.JPG, id=293, 612.03656pt x 505.13719pt>
-File: Correlation.JPG Graphic file (type jpg)
-<use Correlation.JPG>
-Package pdftex.def Info: Correlation.JPG  used on input line 395.
-(pdftex.def)             Requested size: 284.52756pt x 234.83241pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<col.JPG, id=295, 566.115pt x 138.5175pt>
-File: col.JPG Graphic file (type jpg)
-<use col.JPG>
-Package pdftex.def Info: col.JPG  used on input line 406.
-(pdftex.def)             Requested size: 284.52756pt x 69.62pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+(hyperref)                removing `subscript' on input line 388.
 
 [18 <./grafica_transformada.JPG>]
-<modelos_1.JPG, id=304, 471.26062pt x 324.46219pt>
-File: modelos_1.JPG Graphic file (type jpg)
-<use modelos_1.JPG>
-Package pdftex.def Info: modelos_1.JPG  used on input line 426.
-(pdftex.def)             Requested size: 284.52756pt x 195.89671pt.
+<Correlation.JPG, id=299, 612.03656pt x 505.13719pt>
+File: Correlation.JPG Graphic file (type jpg)
+<use Correlation.JPG>
+Package pdftex.def Info: Correlation.JPG  used on input line 397.
+(pdftex.def)             Requested size: 284.52756pt x 234.83241pt.
+<col.JPG, id=301, 566.115pt x 138.5175pt>
+File: col.JPG Graphic file (type jpg)
+<use col.JPG>
+Package pdftex.def Info: col.JPG  used on input line 408.
+(pdftex.def)             Requested size: 284.52756pt x 69.62pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+[19 <./Correlation.JPG>]
+<modelos_1.JPG, id=309, 471.26062pt x 324.46219pt>
+File: modelos_1.JPG Graphic file (type jpg)
+<use modelos_1.JPG>
+Package pdftex.def Info: modelos_1.JPG  used on input line 428.
+(pdftex.def)             Requested size: 284.52756pt x 195.89671pt.
 
-Overfull \hbox (5.49011pt too wide) in paragraph at lines 431--432
+Overfull \hbox (5.49011pt too wide) in paragraph at lines 433--434
 []\T1/cmr/m/n/12 Los va-lo-res que ob-te-ne-mos pa-ra $\OML/cmm/m/it/12 R[]$\T1
 /cmr/m/n/12 -ajustado son: $\OT1/cmr/m/n/12 0[]752$ \T1/cmr/m/n/12 pa-ra \T1/cm
 r/m/it/12 mo-del_raw_1\T1/cmr/m/n/12 ,
  []
 
-[19 <./Correlation.JPG> <./col.JPG>]
-<summa.JPG, id=312, 433.62pt x 305.64188pt>
+[20 <./col.JPG> <./modelos_1.JPG>]
+<summa.JPG, id=317, 433.62pt x 305.64188pt>
 File: summa.JPG Graphic file (type jpg)
 <use summa.JPG>
-Package pdftex.def Info: summa.JPG  used on input line 437.
+Package pdftex.def Info: summa.JPG  used on input line 439.
 (pdftex.def)             Requested size: 284.52756pt x 200.56299pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<anova_modelos.JPG, id=315, 505.13719pt x 124.96687pt>
+<anova_modelos.JPG, id=320, 505.13719pt x 124.96687pt>
 File: anova_modelos.JPG Graphic file (type jpg)
 <use anova_modelos.JPG>
-Package pdftex.def Info: anova_modelos.JPG  used on input line 447.
+Package pdftex.def Info: anova_modelos.JPG  used on input line 449.
 (pdftex.def)             Requested size: 284.52756pt x 70.39093pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[20 <./modelos_1.JPG>] [21 <./summa.JPG> <./anova_modelos.JPG>]
+[21 <./summa.JPG>]
 <Berro.JPG, id=329, 179.16937pt x 249.93375pt>
 File: Berro.JPG Graphic file (type jpg)
 <use Berro.JPG>
-Package pdftex.def Info: Berro.JPG  used on input line 466.
+Package pdftex.def Info: Berro.JPG  used on input line 468.
 (pdftex.def)             Requested size: 170.71652pt x 238.1565pt.
- [22 <./Berro.JPG>]
-<plot_freq_code.png, id=337, 776.9025pt x 909.3975pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[22 <./anova_modelos.JPG>]
+<plot_freq_code.png, id=336, 776.9025pt x 909.3975pt>
 File: plot_freq_code.png Graphic file (type png)
 <use plot_freq_code.png>
-Package pdftex.def Info: plot_freq_code.png  used on input line 480.
+Package pdftex.def Info: plot_freq_code.png  used on input line 482.
 (pdftex.def)             Requested size: 369.88582pt x 432.98128pt.
- [23 <./plot_freq_code.png>]
-<plot_freq_perc.png, id=345, 912.40875pt x 607.26875pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<plot_freq_perc.png, id=338, 912.40875pt x 607.26875pt>
 File: plot_freq_perc.png Graphic file (type png)
 <use plot_freq_perc.png>
-Package pdftex.def Info: plot_freq_perc.png  used on input line 491.
+Package pdftex.def Info: plot_freq_perc.png  used on input line 493.
 (pdftex.def)             Requested size: 369.88582pt x 246.18341pt.
-<categories_1.png, id=346, 738.76pt x 355.3275pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<categories_1.png, id=339, 738.76pt x 355.3275pt>
 File: categories_1.png Graphic file (type png)
 <use categories_1.png>
-Package pdftex.def Info: categories_1.png  used on input line 503.
+Package pdftex.def Info: categories_1.png  used on input line 505.
 (pdftex.def)             Requested size: 369.88582pt x 177.90729pt.
-<categories_2.png, id=347, 736.7525pt x 697.60625pt>
+<categories_2.png, id=340, 736.7525pt x 697.60625pt>
 File: categories_2.png Graphic file (type png)
 <use categories_2.png>
-Package pdftex.def Info: categories_2.png  used on input line 509.
+Package pdftex.def Info: categories_2.png  used on input line 511.
 (pdftex.def)             Requested size: 369.88582pt x 350.22864pt.
-<plot_categories.png, id=348, 1128.215pt x 832.10875pt>
+<plot_categories.png, id=341, 1128.215pt x 832.10875pt>
 File: plot_categories.png Graphic file (type png)
 <use plot_categories.png>
-Package pdftex.def Info: plot_categories.png  used on input line 518.
+Package pdftex.def Info: plot_categories.png  used on input line 520.
 (pdftex.def)             Requested size: 369.88582pt x 272.80646pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--519
+Underfull \hbox (badness 10000) in paragraph at lines 502--521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--519
+Underfull \hbox (badness 10000) in paragraph at lines 502--521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--519
+Underfull \hbox (badness 10000) in paragraph at lines 502--521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--519
+Underfull \hbox (badness 10000) in paragraph at lines 502--521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--519
+Underfull \hbox (badness 10000) in paragraph at lines 502--521
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--519
+Underfull \hbox (badness 10000) in paragraph at lines 502--521
 
  []
 
-[24 <./plot_freq_perc.png>] [25 <./categories_1.png> <./categories_2.png>]
-[26 <./plot_categories.png>]
-<cod_word.JPG, id=367, 567.62062pt x 333.49594pt>
+[23 <./Berro.JPG>] [24 <./plot_freq_code.png>] [25 <./plot_freq_perc.png> <./ca
+tegories_1.png>] [26 <./categories_2.png>]
+<cod_word.JPG, id=366, 567.62062pt x 333.49594pt>
 File: cod_word.JPG Graphic file (type jpg)
 <use cod_word.JPG>
-Package pdftex.def Info: cod_word.JPG  used on input line 532.
+Package pdftex.def Info: cod_word.JPG  used on input line 534.
 (pdftex.def)             Requested size: 369.88582pt x 217.32954pt.
-<wordcloud_tags.png, id=369, 923.45pt x 516.93124pt>
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<wordcloud_tags.png, id=368, 923.45pt x 516.93124pt>
 File: wordcloud_tags.png Graphic file (type png)
 <use wordcloud_tags.png>
-Package pdftex.def Info: wordcloud_tags.png  used on input line 542.
+Package pdftex.def Info: wordcloud_tags.png  used on input line 544.
 (pdftex.def)             Requested size: 369.88582pt x 207.05278pt.
 
-
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<wordcloud_title.png, id=371, 934.49126pt x 527.9725pt>
+[27 <./plot_categories.png>]
+<wordcloud_title.png, id=377, 934.49126pt x 527.9725pt>
 File: wordcloud_title.png Graphic file (type png)
 <use wordcloud_title.png>
-Package pdftex.def Info: wordcloud_title.png  used on input line 555.
+Package pdftex.def Info: wordcloud_title.png  used on input line 557.
 (pdftex.def)             Requested size: 369.88582pt x 208.97786pt.
 
+
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<wordcould_desc.png, id=373, 915.42pt x 512.91624pt>
+[28 <./cod_word.JPG> <./wordcloud_tags.png>]
+<wordcould_desc.png, id=385, 915.42pt x 512.91624pt>
 File: wordcould_desc.png Graphic file (type png)
 <use wordcould_desc.png>
-Package pdftex.def Info: wordcould_desc.png  used on input line 567.
+Package pdftex.def Info: wordcould_desc.png  used on input line 569.
 (pdftex.def)             Requested size: 369.88582pt x 207.2447pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[27 <./cod_word.JPG>] [28 <./wordcloud_tags.png> <./wordcloud_title.png>]
-<coc_comp.JPG, id=390, 219.06844pt x 87.32625pt>
+ [29 <./wordcloud_title.png> <./wordcould_desc.png>]
+<coc_comp.JPG, id=395, 219.06844pt x 87.32625pt>
 File: coc_comp.JPG Graphic file (type jpg)
 <use coc_comp.JPG>
-Package pdftex.def Info: coc_comp.JPG  used on input line 583.
+Package pdftex.def Info: coc_comp.JPG  used on input line 585.
 (pdftex.def)             Requested size: 142.26378pt x 56.71075pt.
-<dif_voc.JPG, id=391, 226.59656pt x 91.09032pt>
+<dif_voc.JPG, id=396, 226.59656pt x 91.09032pt>
 File: dif_voc.JPG Graphic file (type jpg)
 <use dif_voc.JPG>
-Package pdftex.def Info: dif_voc.JPG  used on input line 584.
+Package pdftex.def Info: dif_voc.JPG  used on input line 586.
 (pdftex.def)             Requested size: 142.26378pt x 57.18843pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 589.
+(hyperref)                removing `subscript' on input line 591.
 
-[29 <./wordcould_desc.png> <./coc_comp.JPG> <./dif_voc.JPG>] [30]
-<Sent.JPG, id=404, 768.62157pt x 281.55188pt>
+[30 <./coc_comp.JPG> <./dif_voc.JPG>]
+<Sent.JPG, id=403, 768.62157pt x 281.55188pt>
 File: Sent.JPG Graphic file (type jpg)
 <use Sent.JPG>
-Package pdftex.def Info: Sent.JPG  used on input line 630.
+Package pdftex.def Info: Sent.JPG  used on input line 632.
 (pdftex.def)             Requested size: 284.52756pt x 104.2241pt.
-<pol.JPG, id=405, 778.40813pt x 273.27094pt>
+<pol.JPG, id=404, 778.40813pt x 273.27094pt>
 File: pol.JPG Graphic file (type jpg)
 <use pol.JPG>
-Package pdftex.def Info: pol.JPG  used on input line 631.
+Package pdftex.def Info: pol.JPG  used on input line 633.
 (pdftex.def)             Requested size: 284.52756pt x 99.89108pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 646--650
+ [31]
+Underfull \hbox (badness 10000) in paragraph at lines 648--652
 
  []
 
-[31 <./Sent.JPG> <./pol.JPG>]
-Underfull \hbox (badness 1742) in paragraph at lines 660--662
-[]\T1/cmr/m/n/12 Jason Rad-ford and Ken-neth Jo-seph,\T1/cmr/m/it/12 Theory In,
- Theory Out: The
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 665.
-[32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 665.
- (./PRA2.aux
-LaTeX Info: Redefining \. on input line 24.
-LaTeX Info: Redefining \% on input line 24.
+[32 <./Sent.JPG> <./pol.JPG>] (PRA2.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 665.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 665.
 Package rerunfilecheck Info: File `PRA2.out' has not changed.
-(rerunfilecheck)             Checksum: 5182AEAFBA26D1FCBC41581C5C4E900F;2705.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 665.
+(rerunfilecheck)             Checksum: 00BE7E8EA4DD527F2EE921B67EAEBF8E;2701.
  ) 
 Here is how much of TeX's memory you used:
- 6825 strings out of 480608
- 103057 string characters out of 5903629
- 371143 words of memory out of 5000000
- 22467 multiletter control sequences out of 15000+600000
- 545402 words of font info for 49 fonts, out of 8000000 for 9000
+ 6884 strings out of 480224
+ 106063 string characters out of 2879153
+ 413451 words of memory out of 3000000
+ 23207 multiletter control sequences out of 15000+200000
+ 548152 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,35p,944b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}<
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
-ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbi1200.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/
-texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/te
-xlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texliv
-e/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2020/t
-exmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2020/tex
-mf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on PRA2.pdf (33 pages, 2734390 bytes).
+ 60i,11n,66p,1236b,471s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tc
+rm1200.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/d
+pi600\ecrm0800.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknap
+pen/ec/dpi600\ecbi1200.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfo
+ur/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Usuario\AppData\Local\MiKT
+eX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\Usuario\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Usuario\Ap
+pData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Us
+uario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\
+Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.
+pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\e
+crm1440.pk> <C:\Users\Usuario\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/
+dpi600\ecrm2074.pk><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmmi12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Usuario/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Usuario/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on PRA2.pdf (33 pages, 2712755 bytes).
 PDF statistics:
- 496 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
- 102 named destinations out of 1000 (max. 500000)
+ 870 PDF objects out of 1000 (max. 8388607)
+ 97 named destinations out of 1000 (max. 500000)
  459 words of extra memory for PDF output out of 10000 (max. 10000000)
 

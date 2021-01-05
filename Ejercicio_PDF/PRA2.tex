@@ -41,9 +41,9 @@ Con el fin de aumentar la reproducibilidad del  trabajo, en el repositorio se in
 
 \subsection{Descripci\'on del dataset.}
 
-El conjunto de datos objeto de an\'alisis se ha obtenido a partir de este enlace en Kaggle y esta constituido por 10 datasets (uno por cada mercado regional: Canada, Alemania, Francia, Gran Breta\~na, India, Japon, Korea, M\'ejico, Rusia, Estados Unidos) de 16 caracter\'isticas (columnas) que representan los videos que han llegado a ser Trending en sus respectivas regiones.
+El conjunto de datos objeto de an\'alisis se ha obtenido a partir de este enlace en Kaggle y esta constituido por 10 datasets (uno por cada mercado regional: Canada, Alemania, Francia, Gran Breta\~na, India, Japon, Korea, M\'ejico, Rusia, Estados Unidos), cada dataset tiene 16 atributos (columnas). En los atributos se refleja informaci\'on acerca de videos que ha llegado a ser tendencia en sus respectivas regiones. Cada observaci\'on contiene informaci\'on de un v\'ideo.
 
-Las caracter\'isticas representadas son las siguientes:
+Los atributos representados son las siguientes:
 
 \begin{itemize}
 
@@ -89,13 +89,13 @@ Estos an\'alisis son de gran relevancia actualmente ya que como todos sabemos, l
 
 \section{Integraci\'on y selecci\'on de los datos de inter\'es a analizar}
 
-Tal y como se menciona en la secci\'on anterior este conjunto de datos extra\'idos de {\itshape Kaggle} cuenta con 10 datasets correspondientes a datos para la plataforma {\itshape YouTube} para diez pa\'ises diferentes. Los datasets de los diferentes pa\'ises cuentan con los mismos atributos. En general, los datsets tambi\'en presentan un fallo en la codificaci\'on de los caracteres que hace que las columnas con texto cuyos caracteres no est\'an dentro del alfabeto ingl\'es, no se cargen correctamente. Debido a esto, se han seleccionado 4 datasets a tendiendo a una serie de criterios:
+Tal y como se menciona en la secci\'on anterior este conjunto de datos extra\'idos de {\itshape Kaggle} cuenta con 10 datasets correspondientes a datos para la plataforma {\itshape YouTube} para diez pa\'ises diferentes. Los datasets de los diferentes pa\'ises cuentan con los mismos atributos. En general, los datsets tambi\'en presentan fallos en la codificaci\'on de los caracteres. Este fallo provoca que las columnas con texto cuyos caracteres no est\'an dentro del alfabeto ingl\'es, no se cargen correctamente. Debido a esto, se han seleccionado 4 datasets a tendiendo a una serie de criterios:
 
 \begin{itemize}
 
-\item Podemos leer entender el idioma del pa\'is donde provienen los datos. De este modo, podemos corregir problemas de codificaci\'on de caracteres en un tiempo razonable.
-\item Representan zonas geogr\'aficas de varios continentes, en caso de que queramos hacer comparaciones regionales. 
-\item Al menos dos datsets deben provenir de una regiones diferentes con la misma lengua. Esto permite hacer comparaciones en el uso del lenguaje.
+\item Podemos leer y entender el idioma del pa\'is donde provienen los datos. De este modo, podemos corregir problemas de codificaci\'on de caracteres en un tiempo razonable.
+\item Los datasets representan zonas geogr\'aficas de varios continentes. As\'i, en caso de que queramos hacer comparaciones por regiones se podr\'an hacer. 
+\item Al menos dos datsets deben provenir de regiones diferentes con la misma lengua. Esto permite hacer comparaciones en el uso del lenguaje.
 
 
 
@@ -103,11 +103,11 @@ Tal y como se menciona en la secci\'on anterior este conjunto de datos extra\'id
 
 Atendiendo a estos criterios hemos seleccionado 4 datsets sobre  los que aplicaremos los mismo algoritmos. Todos los datos ser\'an tratados de la misma forma. En caso de que alg\'un dataset requiera un tratamiento especial en alg\'un punto se especificar\'a el motivo.
 
-Los 4 datasets contienen datos para Alemania, Reino Unido, Mexico y EEUU.
+Los 4 datasets seleccionados contienen datos para Alemania, Reino Unido, Mexico y EEUU.
 
 \subsection{Descarga de datos}
 
-Puesto que los datos ya contienen error de codificaci\'on de los atributos de texto y queremos evitar cualquier posible corrupci\'on de los datos al pasar por una m\'aquina intermedia (nuestros ordenadores), vamos a realizar una conexi\'on con Kaggle a trav\'es de su API utilizando nuestro fichero kaggle.json d\'onde guardaremos nuestras claves personales y descargamos los datos directamente a nuestro {\itshape drive} de google desde d\'onde cargaremos los datos a nuestro notebook de {\itshape Google Colab}. 
+Puesto que los datos ya contienen errores de codificaci\'on de los atributos de texto y queremos evitar cualquier posible corrupci\'on de los datos al pasar por una m\'aquina intermedia (nuestros ordenadores), vamos a realizar una conexi\'on con Kaggle a trav\'es de su API utilizando nuestro fichero kaggle.json d\'onde guardaremos nuestras claves personales y descargamos los datos directamente a nuestro {\itshape drive} de google. Luego, cargaremos, directamente, los datos a nuestro notebook de {\itshape Google Colab} (figura \ref{fig:carga}). 
 
 \begin{figure}[h!]
  \centering
@@ -117,7 +117,9 @@ Puesto que los datos ya contienen error de codificaci\'on de los atributos de te
 \end{figure}
 
 
-Una vez nos hemos descargado los datasets y los tenemos en nuestro cloud, vamos a descomprimir el fichero y cargar los distintos datasets en un array de datasets que contendr\'a los diferentes datasets de cada mercado.
+Una vez nos hemos descargado los datasets y los tenemos en nuestro cloud, vamos a descomprimir el fichero y cargar los distintos datasets en un array de datasets que contendr\'a los diferentes datasets de cada mercado. Se puede encontrar un enlace a un objeto {\itshape pickle}, que contiene toda la informaci\'on de nuestra variable {\itshape data{\textunderscore}treat}, en su estado final, en el repositorio de \href{https://github.com/b-suarez/youtube_stats_analysis/blob/main/Pickle_and_other_data/data_and\%20objects.txt}{{\itshape GitHub}}.
+
+
 \begin{figure}[h!]
 \centering
 \includegraphics[width=7cm]{data_load.png}
@@ -129,7 +131,7 @@ Una vez nos hemos descargado los datasets y los tenemos en nuestro cloud, vamos 
 
 \subsection{?`Los datos contienen ceros o elementos vac\'ios? ?`C\'omo gestionar\'ias cada uno de estos casos?}
 
-Para nuestros casos no hay valores nulos, como se puede ver en la siguiente figura \ref{fig:nula} izquierda:
+Para nuestros casos no hay valores nulos, como se puede ver en la figura \ref{fig:nula} izquierda.
 
 \begin{figure}[h!]
 \centering
@@ -141,12 +143,12 @@ Para nuestros casos no hay valores nulos, como se puede ver en la siguiente figu
 
 Los posibles elementos vac\'ios en los atributos de texto se tratan de forma separada durante la limpieza de texto.
 
-Cuando buscamos para valores {\itshape NA} (figura \ref{fig:nula} derecha), vemos que los valores vac\'ios se encuentran en la columna {\itshape description} (atributo texto), de la que no extraemos informaci\'on en nuestro an\'alisis. A\'un as\'i, no ha habido motivo de tratar estos valores directamente ya que durante otros procesos de limpieza, las obsevaciones  que contienen {\itshape NAs} han sido eliminadas por otros motivos. Tambi\'en cabe mencionar que antes de empezar nuestro an\'alisis en {\itshape R} hemos eliminado expl\'icitamente todas las observaciones que conten\'ian valores {\itshape NA}.
+Cuando buscamos valores {\itshape NA} (figura \ref{fig:nula} derecha), vemos que los valores {\itshape NA} se encuentran en la columna {\itshape description} (atributo texto), de la que no extraemos informaci\'on en nuestro an\'alisis. A\'un as\'i, no ha habido motivo de tratar estos valores directamente ya que durante otros procesos de limpieza, las obsevaciones  que contienen {\itshape NAs} han sido eliminadas por otros motivos. Tambi\'en cabe mencionar que antes de empezar nuestro an\'alisis en {\itshape R} hemos eliminado expl\'icitamente todas las observaciones que conten\'ian valores {\itshape NA}.
 
 
 \subsection{Errores en en los c\'odigos de tiempo}
 
-Una de las primeras errores que hemos podido detectar es que los datos referentes a c\'odigos de tiempo se encontraban en formatos diferentes. Por lo que se ha unificado los formatos de tiempo y convertirlos datos de {\itshape object} a {\itshape datetime}.
+Una de los primeros errores que hemos podido detectar es que los datos referentes a c\'odigos de tiempo se encontraban en formatos diferentes. Por lo que se ha unificado los formatos de tiempo. Tambi\'en se han convertido los tipos de datos de {\itshape object} a {\itshape datetime}.
 
 \subsubsection{Correcci\'on  trending date}
 
@@ -176,7 +178,7 @@ La parte de {\itshape language cleaning} es muy importante para nuestro proyecto
 
 \subsubsection{Limpieza general}
 
-En nuestro caso hemos definido diferentes funciones para corregir caracteres mal codificados, emoticonos, signos de puntuaci\'on que no necesitamos para el an\'alisis del lenguaje natura, as\'i como una funci\'on espec\'ifica para tratar caracteres especiales del alfabeto alem\'an l. Hemos aplicado a las columnas: title, channel{\textunderscore}title,  tags y description. Las funciones se presentan el figura \ref{fig:corrtext}.
+En nuestro caso hemos definido diferentes funciones para corregir caracteres mal codificados, emoticonos, signos de puntuaci\'on que no necesitamos para el an\'alisis del lenguaje natural, as\'i como una funci\'on espec\'ifica para tratar caracteres especiales del alfabeto alem\'an. Las funciones las hemos aplicado a las columnas: title, channel{\textunderscore}title,  tags y description. Las funciones se presentan el figura \ref{fig:corrtext}.
 
 
 
@@ -193,7 +195,7 @@ Adem\'as de las correcciones presentadas han sido necesarias, varias rondas de c
 
 \subsubsection{{\itshape Stop Words} para el {\itshape document-Term Matrix}}
 
-Con el fin de realizar las {\itshape World Clouds}, hay que eliminar del {\itshape document-Term Matrix} todas las {\itshape Stop Words}. El m\'odulo {\itshape Count Vectorizer} de {\itshape sklearn} ya proporciona una lista de {\itshape Stop Words} para ingl\'es pero debe ampliarse para otros lenguajes. De proyectos anteriores, ya dispon\'iamos de listas de {\itshape Stop words} para otros idiomas, que hemos a\~nadido, como se puede ver en la figura \ref{fig:stop}.
+Con el fin de realizar las {\itshape World Clouds}, hay que eliminar del {\itshape document-Term Matrix} todas las {\itshape Stop Words}. El m\'odulo {\itshape Count Vectorizer} de {\itshape sklearn} ya proporciona una lista de {\itshape Stop Words} para ingl\'es pero debe ampliarse para otros lenguajes. De proyectos anteriores, ya dispon\'iamos de listas de {\itshape Stop words} para otros idiomas, que hemos a\~nadido, como se puede ver en la figura \ref{fig:stop}. El enlace a las listas de {\itshape Stop Words} que hemos utilizado se puede encontrar en \href{https://github.com/b-suarez/youtube_stats_analysis/blob/main/Pickle_and_other_data/data_and\%20objects.txt}{{\itshape GitHub}}.
 
 \begin{figure}[h!]
 \centering
@@ -202,7 +204,7 @@ Con el fin de realizar las {\itshape World Clouds}, hay que eliminar del {\itsha
 \label{fig:stop}
 \end{figure}
 
-Adem\'as de estas {\itshape Stop Words} ha sido necesario a\~nadir manualmente m\'as palabras debido a los errores de codificaci\'on de los textos
+Adem\'as de estas {\itshape Stop Words} ha sido necesario a\~nadir manualmente m\'as palabras debido a los errores de codificaci\'on de los textos.
 
 \subsection{Identificaci\'on y tratamiento de valores extremos}
 
@@ -225,7 +227,7 @@ Nuestro caso de estudio es, c\'omo las cosas que ocurrieron ayer afecta a los qu
 
 \subsubsection{V\'ideos con defectos}
 
-De entre todas las columnas destacan unas con valores l\'ogicos:  {\itshape comments{\textunderscore}disabled}, {\itshape ratings{\textunderscore}disabled} y {\itshape video {\textunderscore}error{\textunderscore}or{\textunderscore}removed}, que est\'an marcados indicando alg\'un tipo de carencia. 
+De entre todas las columnas destacan unas con valores l\'ogicos:  {\itshape comments{\textunderscore}disabled}, {\itshape ratings{\textunderscore}disabled} y {\itshape video {\textunderscore}error{\textunderscore}or{\textunderscore}removed}, que est\'an  indicando alg\'un tipo de carencia en el v\'ideo. 
 
 Con el fin de homogeneizar los datos, es decir, hacer que todos nuestros datos provengan de v\'ideos con las mismas caracter\'isticas generales, vamos a eliminar las filas con valores {\itshape True} en cualquiera de estos atributos. Esto se puede ver en la figura \ref{fig:defect}. Tambi\'en se puede observar que en general se conserva m\'as del $96\%$ de la informaci\'on. 
 
@@ -246,7 +248,7 @@ Debido a que estas columnas solo contienen valores {\itshape FALSE} despu\'es de
 
 No existe informaci\'on sobre que categor\'ia representa el id 29, por lo tanto eliminamos \'esta del dataset. Otra raz\'on para eliminarla es que al no saber que representa dicha categor\'ia, aun en el caso que pudi\'esemos extraer alguna informaci\'on para la categor\'ia 29, no podr\'iamos darle un sentido concreto
 
-En la figura \ref{fig:cat29}, se puede ver que despu\'es de eliminar los observaciones de esta categor\'ia, preservamos m\'as del 95 porciento de la informaci\'on.
+En la figura \ref{fig:cat29}, se puede ver que despu\'es de eliminar las observaciones de esta categor\'ia, preservamos m\'as del 95 porciento de la informaci\'on.
 
 \begin{figure}[h!]
 \centering
@@ -259,9 +261,9 @@ En la figura \ref{fig:cat29}, se puede ver que despu\'es de eliminar los observa
 
 
 
-\subsubsection[item_metricas]{Generaci\'on de m\'etricas y an\'alisis de datos}
+\subsubsection[Metricas]{Generaci\'on de m\'etricas y an\'alisis de datos}
 
-Nuestros datos en bruto pueden carecer de sentido sin una referencia; ?`Son dos v\'ideos con el mismo n\'umero de visitas igual de relevantes? o Para dos videos con el mismo n\'umero de likes, ?`Podemos pensar que han despertado el mismo inter\'es?. Otro ejemplo ser\'ia tenemos videos con un gran n\'umero de visitas pero pocos comentarios (lo que llamariamos un click bait), o un video con pocas visitas pero un gran n\'umero de comentarios.
+Nuestros datos en bruto pueden carecer de sentido sin una referencia; ?`Son dos v\'ideos con el mismo n\'umero de visitas igual de relevantes? . Para dos v\'ideos con el mismo n\'umero de likes, ?`Podemos pensar que han despertado el mismo inter\'es?. Otro ejemplo ser\'ia tenemos videos con un gran n\'umero de visitas pero pocos comentarios (lo que llamariamos un click bait), o un video con pocas visitas pero un gran n\'umero de comentarios.
 
 Para poder solventar inconveniente de que carecemos de referencias y poder analizar correctamente los v\'ideos, creamos una serie de m\'etricas relativas que nos ayudar\'an a realizar an\'alisis m\'as  de los v\'ideos.
 
@@ -298,7 +300,7 @@ Para medir esto, hemos creado un atributo {\itshape rel{\textunderscore}relevanc
 
 Haciendo un plot de las frecuencias de este valor (figura \ref{fig:relfig}), podemos observar que la mayor parte de los videos tiene un valor menor que  1.  De hecho, observamos que los v\'ideos que alcanzan{\itshape trending} tienen a tener un ratio menor que 0.5, alcanzando un pico claro alrededor 0.25.
 
-Esto nos da a entender que los v\'ideos que alcanzan {\itshape trending} no suelen ser muy pol\'emicos en general, lo cual tiene sentido ya que suelen ser v\'ideos que atraen a un p\'ublico general.
+Esto nos da a entender que los v\'ideos que alcanzan {\itshape trending} no suelen ser muy pol\'emicos en general, lo cual tiene sentido ya que suelen ser v\'ideos que atraen a un p\'ublico general. Entendemos c\'omo v\'ideo pol\'emico aquel que hace que la mayor\'ia de personas que ven el v\'ideo quieran comentarlo o genera una cantidad alta de comentarios y subcomentarios.
 
 \begin{figure}[h!]
 \centering
@@ -340,9 +342,9 @@ Esto \'ultimo es m\'as evidente en la curva  para {\itshape Overall engagement} 
 
 \subsection{Comprobaci\'on de la normalidad y homogeneidad de la varianza.}
 
-Nuestro daset presenta dos dificultades a la hora de comprobar si los datos y las m\'etricas siguen una distribuci\'on normal. Por una parte el gran n\'umero de datos hace inviable la aplicaci\'on del test de normalidad de {\itshape  Shapiro Wilk}, por otra parte, al existir muchos valores repetidos para un atributo el test de {\itshape Anderson Darling} no es fiable ya que siempre devolver\'a como resultado el rechazo de la hip\'otesis nula. Por este motivo nos centramos en los valores de {\itshape Kurosis} y {\itshape Skewness}. Para estos test, t\'ipicamnete se considera que una distribuci\'on es normal cuando el valor de {\itshape Kurtosis} est\'a entre $-2$ y $+2$ y para {\itshape skewness} los valores deben caer dentro del intervalo entre $-0.8$ y $+0.8$.
+Nuestro daset presenta dos dificultades a la hora de comprobar si los datos y las m\'etricas siguen una distribuci\'on normal. Por una parte el gran n\'umero de datos hace inviable la aplicaci\'on del test de normalidad de {\itshape  Shapiro Wilk}. Por otra parte, al existir muchos valores repetidos para un atributo, el test de {\itshape Anderson Darling} no es fiable ya que siempre devolver\'a como resultado el rechazo de la hip\'otesis nula. Por este motivo nos centramos en los valores de {\itshape Kurosis} y {\itshape Skewness}. Para estos test, t\'ipicamnete se considera que una distribuci\'on es normal cuando el valor de {\itshape Kurtosis} est\'a entre $-2$ y $+2$ y para {\itshape skewness} los valores deben caer dentro del intervalo entre $-0.8$ y $+0.8$.
 
-Hemos creado una funci\'on {\itshape normal check} que nos devuelve 1 cuando los datos de un atributo siguen una distribuci\'on normal (en las condiciones especificadas arriba) y 0 cuando no la sigue. La hemos aplicado sobre todas las columnas de todos los datasets y los datos los hemos visualizado como un dataframe que se copia abajo (los detalles de la funci\'on se encuentran el notebook).
+Hemos creado una funci\'on, {\itshape normal check}, que nos devuelve 1 cuando los datos de un atributo siguen una distribuci\'on normal (en las condiciones especificadas arriba) y 0 cuando no la sigue. La hemos aplicado sobre todas las columnas de todos los datasets y los datos los hemos visualizado como un dataframe que se copia abajo (los detalles de la funci\'on se encuentran el notebook).
 
 Podemos comprobar que tanto los valores de los datos en crudo, como las m\'etricas que hemos implementado no siguen una distribuci\'on normal (figura \ref{fig:norm_1}). Con el fin de solucionar este problema y conseguir una distribuci\'on homog\'enea de la varianza, hemos optado por utilizar en primera instancia una transformaci\'on de {\itshape Yeo Jhonson}, puesto que nos permite aplicar el mismo c\'odigo sobre todos los atributos (una transformaci\'on de {\itshape Yeo Jhonson} a diferencia de {\itshape Boxcox} nos permite trabajar con valores negativos y ceros).
 
@@ -357,9 +359,9 @@ Podemos comprobar que tanto los valores de los datos en crudo, como las m\'etric
 \label{fig:norm_1}
 \end{figure}
  
-Como se puede ver los datos en crudo se han podido transformar de forma que ahora siguen una distribuci\'on normal (figura \ref{fig:norm_1}). Los datos transformados se guardan en las columnas {\itshape fviews}, {\itshape likes}, {\itshape dislikes} y {\itshape fcommentl{\textunderscore}count}. Adem\'as los valores de lambda tambi\'en se guardan para poder deshacer la transformaci\'on (se pueden ver todos los detalles en el notebook en el apartado {\itshape Power transformation and descriptive statistics for the metrics}).
+Como se puede ver en la figura  \ref{fig:norm_1}, los datos en crudo se han podido transformar de forma que ahora siguen una distribuci\'on normal . Los datos transformados se guardan en las columnas {\itshape fviews}, {\itshape likes}, {\itshape dislikes} y {\itshape fcommentl{\textunderscore}count}. Adem\'as los valores de lambda tambi\'en se guardan para poder deshacer la transformaci\'on (se pueden ver todos los detalles en el notebook en el apartado {\itshape Power transformation and descriptive statistics for the metrics}).
 
-Sin embargo, las m\'etricas no siguen todav\'ia una distribuci\'on normal. Intentamos corregir este hecho hemos realizado una transformaci\'on por quantiles sobre las m\'etricas. Los nombres asociados a los datos de las m\'etricas trasnformados por quartiles son : {\itshape q{\textunderscore}rvs}, {\itshape q{\textunderscore}rel{\textunderscore}rel} y{\itshape q{\textunderscore}overall{\textunderscore}sen{\textunderscore}eng}. Una vez hechas las transformaciones, volvemos aplicar la funci\'on implementada para el c\'alculo de la normalidad de los atributos y representamos los resultados en un dataframe que se puede ver en la figura \ref{fig:quar}.
+Sin embargo, las m\'etricas no siguen todav\'ia una distribuci\'on normal. Para intentar corregir este hecho hemos realizado una transformaci\'on por quantiles sobre las m\'etricas. Los nombres asociados a los datos de las m\'etricas trasnformados por quartiles son : {\itshape q{\textunderscore}rvs}, {\itshape q{\textunderscore}rel{\textunderscore}rel} y{\itshape q{\textunderscore}overall{\textunderscore}sen{\textunderscore}eng}. Una vez hechas las transformaciones, volvemos aplicar la funci\'on implementada para el c\'alculo de la normalidad de los atributos y representamos los resultados en un dataframe que se puede ver en la figura \ref{fig:quar}.
 
 \begin{figure}[h!]
 \centering
@@ -459,7 +461,7 @@ Para el modelo reducido tenemos un RMSE de $0.1830192$ y al dividirlo por el val
 
 \subsubsection{M\'etodo 3: Pruebas de contraste de hip\'otesis}
 
-En este punto nos preguntamos que conjunto de categor\'ias de v\'ideos tienen medias de n\'umero de visualizaciones similares estad\'isticamente (no se puede rechazar la hip\'otesis nula). Una forma de comprobar esto es realizar comprobaciones por pares (hecho en el c\'odigo del notebook), sin embargo, tal y como recoge el material que proporciona la UOC para la asignatura de estad\'istica avanzada corremos el riesgo de aceptar alg\'un resultado significativo incluso cuando todos no lo son. Una las alternativas que se proponen es usar una correcci\'on conservadora (Bonferroni). El paquete {\itshape agricolae} que implementa esta correci\'on tiene adem\'as la ventaja que ya nos codifica con las mismas letras los grupos para los que no existe diferencia. En la figura \ref{fig:Berro} se puede ver el resultado para Mexico (aunque en el c\'odigo del notebook est\'an los resultados para todos los pa\'ises).
+En este punto nos preguntamos que conjunto de categor\'ias de v\'ideos para cada pa\'is tienen medias de n\'umero de visualizaciones similares estad\'isticamente (no se puede rechazar la hip\'otesis nula entre las medias de dos categor\'ias). Una forma de comprobar esto es realizar comprobaciones por pares (se puede ver en el c\'odigo del notebook, pero no se incluye en  este texto). Sin embargo, tal y como recoge el material que proporciona la UOC para la asignatura de estad\'istica avanzada, procediendo de esta forma, corremos el riesgo de aceptar alg\'un resultado significativo incluso cuando todos no lo son. Una de las alternativas que se proponen es usar una correcci\'on conservadora (Bonferroni). El paquete {\itshape agricolae} que implementa esta correci\'on tiene adem\'as la ventaja que ya nos codifica con las mismas letras los grupos para los que no existe diferencia. En la figura \ref{fig:Berro} se puede ver el resultado para Mexico (aunque en el c\'odigo del notebook est\'an los resultados para GB, EEUU y MX). Todos estos c\'alculos se han realizado usando la variable transformada exponencialmente {\itshape fviews}, puesto que estos datos ya siguen una distribuci\'on normal.
 
 \begin{figure}[h!]
 \centering
@@ -572,7 +574,7 @@ Por \'ultimo, en la figura \ref{fig:colud_4},  mostramos las palabras mas utiliz
 Como se puede observar, lo que mas se ven son nombres de redes sociales y webs, esto se debe a que la mayor\'ia de creadores de contenido introducen sus redes sociales en la descripci\'on. Para poder obtener informaci\'on relevante de \'esta wordcloud necesitamos realizar m\'as tareas de limpieza.
 
 \subsubsection{Uso de vocabulario}
-Una de las cuestiones que nos planteábamos al presentar los objetivos de la pr\'actica es si pod\'iamos encontrar diferencias en el uso del vocabulario de dos pa\'ises donde se hable la misma lengua.
+Una de las cuestiones que nos plante\'abamos al presentar los objetivos de la pr\'actica es si pod\'iamos encontrar diferencias en el uso del vocabulario de dos pa\'ises donde se hable la misma lengua.
 
 Para realizar este an\'alisis se han contado todas las palabras que al menos ocurren una vez en el {\itshape document term Matrix} de los datasets de Gran Breta\~na y EEUU. Como podemos ver en la figura \ref{fig:voc} de la izquierda en ambos pa\'ises se usan la misma cantidad de palabras \'unicas. Sin embargo cuando nos preguntamos por la diversidad del vocabulario, es decir, en que pa\'is se usa una variedad m\'as amplia de palabras vemos que la diferencia entre Gran Breta\~na y EEUU es bastante notable. En EEUU hay muchas m\'as palabras que aparecen m\'as e 100 veces, por lo que el vocabulario de EEUU se encuentra m\'as concentrado en un n\'umero de palabras m\'as reducido que si lo comparamos con el vocabulario de Gran Breta\~na (figura \ref{fig:voc} derecha). 
 
@@ -582,7 +584,7 @@ Para realizar este an\'alisis se han contado todas las palabras que al menos ocu
 
 \includegraphics[width=5cm]{coc_comp.JPG}
 \includegraphics[width=5cm]{dif_voc.JPG}
-\caption{Diferencias en vocabulario}
+\caption{Diferencias en vocabulario. Izquierda) n\'umero de palabras \'unicas. Derecha) n\'umero de palabras \'unicas que aparecen m\'as de 100 veces.}
 \label{fig:voc}
 \end{figure}
 
@@ -599,7 +601,7 @@ Siguiendo el esquema de preguntas que nos plante\'abamos al principio de la pr\'
 
 \item ?` Cu\'anto tarda un video en hacerse Trending?
 \begin{itemize}
-\item Depende fuertemente el pa\'is. De los pa\'ises investigados hasta 30 d\'ias es razonable para Gran Breta\~na. Para el resto, despu\'es de cinco d\'ias de su publicaci\'on la cantidad de v\'ideos que llegan a {\itshape a trending se reduce exponencialmente}
+\item Depende fuertemente el pa\'is. De los pa\'ises investigados hasta 30 d\'ias es razonable para Gran Breta\~na. Para el resto, despu\'es de cinco d\'ias de su publicaci\'on la cantidad de v\'ideos que llegan a {\itshape a trending} se reduce exponencialmente.
 \end{itemize}
 \item ?`Cuales son las palabras m\'as utilizadas?
 \begin{itemize}
@@ -649,17 +651,5 @@ Hemos obtenido m\'ultiples conclusiones muy interesantes, hemos visto c\'omo los
 Todas estas conclusiones ser\'an de gran utilidad para cualquier creador de contenido que trate de hacerse un hueco en YouTube, o incluso grandes empresas que quieran realizar propuestas de marketing a trav\'es de la plataforma podri\'ian utilizar \'esta informaci\'on para especializar los anuncios por comunidad o mercado.
 
 
-\begin{thebibliography}{9}
-
-\bibitem{td1} Leonard Berzkowitz,%
-	\emph{ Advances in Experimental Social Psychology}, 1967,  Academic press
-\bibitem{td2} Richard McElreath, Robert Boyd,%
-	\emph{ Mathematical Models of Social Evolution: A Guide for the Perplexed}, 2007, The University of Chicago Press
-\bibitem{td3}Thomas L. Saaty and Joyce M. Alexander,%
-	\emph{Thinking with models: Mathematical Models in the Physical, Biological, and Social Sciences}, 2015, RWS Publications
-\bibitem{dd1}Jason Radford and Kenneth Joseph,%
-	\emph{Theory In, Theory Out: The Uses of Social Theory in Machine Learning for Social Science}, 2020, doi.org/10.3389/fdata.2020.00018
-
-\end{thebibliography}
 
 \end{document}
